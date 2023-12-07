@@ -17,7 +17,7 @@ namespace backbone
         private void Form1_click(object sender, EventArgs e)
         {
             form2 f2 = new form2();
-            this.Hide();
+            this.Close();
             f2.ShowDialog();
         }
 

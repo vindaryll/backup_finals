@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using pv = backbone.PublicVariables;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -42,10 +32,11 @@ namespace backbone
                 if (pv.itemQuantity[pv.indexItem] == 1)
                 {
                     DialogResult option = MessageBox.Show($"Are you sure to remove item no.{pv.indexItem + 1}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (option == DialogResult.Yes) {
+                    if (option == DialogResult.Yes)
+                    {
                         // If the user clicks "Yes", the system will remove the item and will automatically get back to designated interface
                         minus();
-                        getBack(); 
+                        getBack();
                     }
                     // If the user clicks "No", do nothing
                 }

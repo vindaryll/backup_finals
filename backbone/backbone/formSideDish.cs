@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -26,9 +18,9 @@ namespace backbone
             {
                 var button = this.Controls.Find($"button{i - 9}", true).FirstOrDefault() as Button;
 
-                if (button != null && i < PublicVariables.itemName.Length)
+                if (button != null && i < pv.itemName.Length)
                 {
-                    button.Text = PublicVariables.itemName[i];
+                    button.Text = pv.itemName[i];
                 }
             }
 
@@ -40,37 +32,37 @@ namespace backbone
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 10;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 10;
+            isAvailable(pv.indexItem);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 11;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 11;
+            isAvailable(pv.indexItem);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 12;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 12;
+            isAvailable(pv.indexItem);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 13;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 13;
+            isAvailable(pv.indexItem);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 14;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 14;
+            isAvailable(pv.indexItem);
         }
 
         private void isAvailable(int index)
         {
-            if (PublicVariables.itemAvailability[index])
+            if (pv.itemAvailability[index])
             {
                 order();
                 CloseOrderInterface();

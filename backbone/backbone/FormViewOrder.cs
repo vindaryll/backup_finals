@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -17,10 +9,10 @@ namespace backbone
         {
             InitializeComponent();
             showData();
-            lblTotalBill.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
-            lblTotalQuantity.Text = PublicVariables.totalQuantity.ToString();
+            lblTotalBill.Text = "PHP " + pv.totalBill.ToString("N2");
+            lblTotalQuantity.Text = pv.totalQuantity.ToString();
         }
-        
+
         private void showData()
         {
             dataGridView1.Rows.Clear();
@@ -37,14 +29,14 @@ namespace backbone
         private void button1_Click(object sender, EventArgs e)
         {
             FormOrderInterface form = new();
-            this.Hide();
+            this.Close();
             form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormPayment1 form = new FormPayment1();
-            this.Hide();
+            this.Close();
             form.Show();
         }
 
@@ -58,7 +50,7 @@ namespace backbone
                 {
                     if (itemID > 0)
                     {
-                        PublicVariables.indexItem = itemID - 1;
+                        pv.indexItem = itemID - 1;
                         FormEditOrder form = new();
                         form.Show();
                         this.Close();
@@ -73,7 +65,7 @@ namespace backbone
             {
                 // nothing to show
             }
-            
+
         }
     }
 }

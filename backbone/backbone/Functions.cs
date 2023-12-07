@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
-using MySql.Data.MySqlClient;
-using System.Windows.Forms;
-using backbone;
-
 using pv = backbone.PublicVariables;
 namespace backbone
 {
     public class Functions
-    {            
+    {
 
         DbConnect dbcon = new DbConnect();
 
@@ -161,7 +153,7 @@ namespace backbone
             }
             catch (Exception ex)
             {
-                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -258,7 +250,7 @@ namespace backbone
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));     
+                    pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));
                 }
                 else
                 {
@@ -269,7 +261,7 @@ namespace backbone
                     cmd = new MySqlCommand(query2, dbcon.Getcon());
                     reader = cmd.ExecuteReader();
                     if (reader.HasRows)
-                    {          
+                    {
                         reader.Read();
                         pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID")) + 1;
                         pv.isNewCustomer = true;
@@ -279,8 +271,8 @@ namespace backbone
                         pv.customerID = 1;
                         pv.isNewCustomer = true;
                     }
-                    
-                 
+
+
 
                 }
 
@@ -324,7 +316,7 @@ namespace backbone
             {
                 dbcon.CloseCon();
             }
-            
+
 
         }
 
@@ -628,7 +620,7 @@ namespace backbone
         }
 
         // ORDER PICTURES
-            // for pic boxes
+        // for pic boxes
         public void mainDish(PictureBox[] pictureBoxes)
         {
             string[] imagePaths = new string[10];

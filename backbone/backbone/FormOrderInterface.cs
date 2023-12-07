@@ -1,13 +1,4 @@
-﻿using backbone.AdminForm;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -22,8 +13,8 @@ namespace backbone
 
         private void showData()
         {
-            lblTotalBill.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
-            lblTotalQuantity.Text = PublicVariables.totalQuantity.ToString();
+            lblTotalBill.Text = "PHP " + pv.totalBill.ToString("N2");
+            lblTotalQuantity.Text = pv.totalQuantity.ToString();
 
             panel1.Controls.Clear();
             formMainDish form = new();
@@ -34,7 +25,7 @@ namespace backbone
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             panel1.Controls.Clear();
             formMainDish form = new();
             form.Dock = DockStyle.Fill;
@@ -63,7 +54,7 @@ namespace backbone
 
         private void btnVoidOrder_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show($"Do you wanna void this order, {PublicVariables.customerName}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Do you wanna void this order, {pv.customerName}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 func.VarReset();
@@ -77,14 +68,14 @@ namespace backbone
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            if (PublicVariables.totalBill <= 0)
+            if (pv.totalBill <= 0)
             {
                 MessageBox.Show("no orders have been placed yet.", "Empty tray", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 FormViewOrder oi = new FormViewOrder();
-                this.Hide();
+                this.Close();
                 oi.Show();
             }
         }

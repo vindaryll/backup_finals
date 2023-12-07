@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -25,9 +17,9 @@ namespace backbone
             {
                 if (textBox3.Text.Length == 11)
                 {
-                    PublicVariables.customerName = textBox1.Text.ToUpper();
-                    PublicVariables.customerAddress = textBox2.Text.ToUpper();
-                    PublicVariables.customerContact = textBox3.Text.ToUpper();
+                    pv.customerName = textBox1.Text.ToUpper();
+                    pv.customerAddress = textBox2.Text.ToUpper();
+                    pv.customerContact = textBox3.Text.ToUpper();
 
                     FormOrderInterface form = new();
                     this.Close();

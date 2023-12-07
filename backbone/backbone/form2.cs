@@ -12,7 +12,7 @@
         private void button2_Click(object sender, EventArgs e)
         {
             formCustomer fc = new formCustomer();
-            this.Hide();
+            this.Close();
             fc.ShowDialog();
         }
 
@@ -20,9 +20,8 @@
         {
             AdminForm.aLoginForm form1 = new AdminForm.aLoginForm();
             form1.Show();
-
             this.Close();
-            // Application.Exit();
+
         }
 
         private void button3_Click(object sender, EventArgs e)

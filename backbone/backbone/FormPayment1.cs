@@ -21,21 +21,21 @@ namespace backbone
         {
             FormPaymentCash form = new FormPaymentCash();
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FormViewOrder form = new FormViewOrder();
             form.Show(); 
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormPaymentEpayment form = new FormPaymentEpayment();
             form.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
-using MySql.Data.MySqlClient;
-using System.Windows.Forms;
 
 namespace backbone
 {
@@ -13,9 +7,9 @@ namespace backbone
     {
         private MySqlConnection con = new MySqlConnection("server=127.0.0.1; user=root; database=finals_db ; password=");
 
-        public MySqlConnection Getcon() 
-        { 
-            return con; 
+        public MySqlConnection Getcon()
+        {
+            return con;
         }
         public void OpenCon()
         {

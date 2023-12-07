@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using pv = backbone.PublicVariables;
 
 namespace backbone
 {
@@ -26,9 +18,9 @@ namespace backbone
             {
                 var button = this.Controls.Find($"button{i + 1}", true).FirstOrDefault() as Button;
 
-                if (button != null && i < PublicVariables.itemName.Length)
+                if (button != null && i < pv.itemName.Length)
                 {
-                    button.Text = PublicVariables.itemName[i];
+                    button.Text = pv.itemName[i];
                 }
             }
 
@@ -42,68 +34,68 @@ namespace backbone
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 0;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 0;
+            isAvailable(pv.indexItem);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 1;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 1;
+            isAvailable(pv.indexItem);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 2;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 2;
+            isAvailable(pv.indexItem);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 3;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 3;
+            isAvailable(pv.indexItem);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 4;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 4;
+            isAvailable(pv.indexItem);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 5;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 5;
+            isAvailable(pv.indexItem);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 6;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 6;
+            isAvailable(pv.indexItem);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 7;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 7;
+            isAvailable(pv.indexItem);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 8;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 8;
+            isAvailable(pv.indexItem);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            PublicVariables.indexItem = 9;
-            isAvailable(PublicVariables.indexItem);
+            pv.indexItem = 9;
+            isAvailable(pv.indexItem);
         }
 
 
         private void isAvailable(int index)
         {
-            if (PublicVariables.itemAvailability[index])
+            if (pv.itemAvailability[index])
             {
                 order();
                 CloseOrderInterface();
