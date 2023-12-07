@@ -33,9 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,7 +48,6 @@
             this.lblPayment = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -93,45 +89,15 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(63, 164);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 614);
+            this.panel1.Size = new System.Drawing.Size(705, 300);
             this.panel1.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Price";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(419, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "QTY";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "ITEM";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(63, 794);
+            this.label8.Location = new System.Drawing.Point(63, 540);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 20);
             this.label8.TabIndex = 5;
@@ -140,7 +106,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(482, 794);
+            this.label9.Location = new System.Drawing.Point(482, 540);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 20);
             this.label9.TabIndex = 6;
@@ -149,7 +115,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(473, 837);
+            this.label10.Location = new System.Drawing.Point(473, 583);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 20);
             this.label10.TabIndex = 7;
@@ -158,7 +124,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(62, 892);
+            this.label11.Location = new System.Drawing.Point(62, 638);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(111, 20);
             this.label11.TabIndex = 8;
@@ -167,7 +133,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(488, 892);
+            this.label12.Location = new System.Drawing.Point(488, 638);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 9;
@@ -207,7 +173,7 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(63, 821);
+            this.lblDate.Location = new System.Drawing.Point(63, 567);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(288, 30);
             this.lblDate.TabIndex = 14;
@@ -215,7 +181,7 @@
             // 
             // lblMop
             // 
-            this.lblMop.Location = new System.Drawing.Point(532, 789);
+            this.lblMop.Location = new System.Drawing.Point(532, 535);
             this.lblMop.Name = "lblMop";
             this.lblMop.Size = new System.Drawing.Size(174, 30);
             this.lblMop.TabIndex = 15;
@@ -223,7 +189,7 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Location = new System.Drawing.Point(532, 832);
+            this.lblTotal.Location = new System.Drawing.Point(532, 578);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(174, 30);
             this.lblTotal.TabIndex = 16;
@@ -231,7 +197,7 @@
             // 
             // lblPayment
             // 
-            this.lblPayment.Location = new System.Drawing.Point(177, 887);
+            this.lblPayment.Location = new System.Drawing.Point(177, 633);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(174, 30);
             this.lblPayment.TabIndex = 17;
@@ -239,7 +205,7 @@
             // 
             // lblChange
             // 
-            this.lblChange.Location = new System.Drawing.Point(565, 887);
+            this.lblChange.Location = new System.Drawing.Point(565, 633);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(174, 30);
             this.lblChange.TabIndex = 18;
@@ -247,11 +213,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(313, 931);
+            this.button1.Location = new System.Drawing.Point(636, 773);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 61);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Restart";
+            this.button1.Text = "done";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -282,8 +248,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormReceipt";
             this.Text = "FormReceipt";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,9 +260,6 @@
         private Label label3;
         private Label label4;
         private Panel panel1;
-        private Label label7;
-        private Label label6;
-        private Label label5;
         private Label label8;
         private Label label9;
         private Label label10;

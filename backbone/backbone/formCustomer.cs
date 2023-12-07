@@ -23,17 +23,21 @@ namespace backbone
 
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
             {
-                PublicVariables.customerName = textBox1.Text.ToUpper();
-                PublicVariables.customerAddress = textBox2.Text.ToUpper();
-                PublicVariables.customerContact = textBox3.Text.ToUpper();
+                if (textBox3.Text.Length == 11)
+                {
+                    PublicVariables.customerName = textBox1.Text.ToUpper();
+                    PublicVariables.customerAddress = textBox2.Text.ToUpper();
+                    PublicVariables.customerContact = textBox3.Text.ToUpper();
 
-
-                //FormOrderInterface orderinterface = new FormOrderInterface();
-                //this.Hide();
-                //orderinterface.Show();
-                FormOrderInterface form = new();
-                this.Close();
-                form.ShowDialog();
+                    FormOrderInterface form = new();
+                    this.Close();
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid phone number", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox3.Text = string.Empty;
+                }
 
             }
             else

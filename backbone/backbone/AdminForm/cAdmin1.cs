@@ -26,9 +26,13 @@ namespace backbone.AdminForm
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.Show();
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure you want to log out?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result== DialogResult.Yes)
+            {
+                Form1 form = new Form1();
+                form.Show();
+                this.Close();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

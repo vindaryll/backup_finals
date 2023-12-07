@@ -22,7 +22,7 @@ namespace backbone
 
         private void showData()
         {
-            lblTotalBill.Text = PublicVariables.totalBill.ToString("N2");
+            lblTotalBill.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
             lblTotalQuantity.Text = PublicVariables.totalQuantity.ToString();
 
             panel1.Controls.Clear();
@@ -79,7 +79,7 @@ namespace backbone
         {
             if (PublicVariables.totalBill <= 0)
             {
-                // nothing to show
+                MessageBox.Show("no orders have been placed yet.", "Empty tray", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

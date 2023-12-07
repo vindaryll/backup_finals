@@ -51,7 +51,7 @@ namespace backbone
         public static double currentPrice;
 
 
-        // RECORD
+            // RECORDS
         public static int[] record_itemID = new int[0];
         public static string[] record_itemName = new string[0];
         public static double[] record_quantity = new double[0];

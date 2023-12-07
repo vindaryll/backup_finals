@@ -20,52 +20,76 @@ namespace backbone
         public void VarReset()
         {
             // reseting strings, arrays, and numeric values to default
-            PublicVariables.customerName = string.Empty;
-            PublicVariables.customerAddress = string.Empty;
-            PublicVariables.customerContact = string.Empty;
+            pv.customerName = string.Empty;
+            pv.customerAddress = string.Empty;
+            pv.customerContact = string.Empty;
 
-            for (int i = 0; i < PublicVariables.itemID.Length; i++)
+            for (int i = 0; i < pv.itemID.Length; i++)
             {
-                PublicVariables.itemID[i] = 0;
+                pv.itemID[i] = 0;
             }
-            for (int i = 0; i < PublicVariables.itemName.Length; i++)
+            for (int i = 0; i < pv.itemName.Length; i++)
             {
-                PublicVariables.itemName[i] = string.Empty;
+                pv.itemName[i] = string.Empty;
             }
-            for (int i = 0; i < PublicVariables.itemPrice.Length; i++)
+            for (int i = 0; i < pv.itemPrice.Length; i++)
             {
-                PublicVariables.itemPrice[i] = 0;
+                pv.itemPrice[i] = 0;
             }
-            for (int i = 0; i < PublicVariables.itemDescription.Length; i++)
+            for (int i = 0; i < pv.itemDescription.Length; i++)
             {
-                PublicVariables.itemDescription[i] = string.Empty;
+                pv.itemDescription[i] = string.Empty;
             }
-            for (int i = 0; i < PublicVariables.itemAvailability.Length; i++)
+            for (int i = 0; i < pv.itemAvailability.Length; i++)
             {
-                PublicVariables.itemAvailability[i] = false;
+                pv.itemAvailability[i] = false;
             }
-            for (int i = 0; i < PublicVariables.itemQuantity.Length; i++)
+            for (int i = 0; i < pv.itemQuantity.Length; i++)
             {
-                PublicVariables.itemQuantity[i] = 0;
+                pv.itemQuantity[i] = 0;
             }
-            for (int i = 0; i < PublicVariables.mealTotal.Length; i++)
+            for (int i = 0; i < pv.mealTotal.Length; i++)
             {
-                PublicVariables.mealTotal[i] = 0;
+                pv.mealTotal[i] = 0;
             }
 
-            PublicVariables.indexItem = 0;
-            PublicVariables.paymentMethod = string.Empty;
-            PublicVariables.paymentAmount = 0;
-            PublicVariables.changeAmount = 0;
-            PublicVariables.totalQuantity = 0;
-            PublicVariables.totalBill = 0;
-            PublicVariables.customerID = 0;
-            PublicVariables.isNewCustomer = false;
-            PublicVariables.orderID = 0;
-            PublicVariables.date = string.Empty;
+            pv.indexItem = 0;
+            pv.paymentMethod = string.Empty;
+            pv.paymentAmount = 0;
+            pv.changeAmount = 0;
+            pv.totalQuantity = 0;
+            pv.totalBill = 0;
+            pv.customerID = 0;
+            pv.isNewCustomer = false;
+            pv.orderID = 0;
+            pv.date = string.Empty;
 
+            pv.username = string.Empty;
+            pv.password = string.Empty;
+            pv.verification = string.Empty;
 
-            // wala pa yung asa admin
+            pv.adminItemIndex = 0;
+            pv.currentPrice = 0;
+            for (int i = 0; i < pv.record_itemID.Length; i++)
+            {
+                pv.record_itemID[i] = 0;
+            }
+            for (int i = 0; i < pv.record_itemName.Length; i++)
+            {
+                pv.record_itemName[i] = string.Empty;
+            }
+            for (int i = 0; i < pv.record_itemName.Length; i++)
+            {
+                pv.record_itemName[i] = string.Empty;
+            }
+            for (int i = 0; i < pv.record_quantity.Length; i++)
+            {
+                pv.record_quantity[i] = 0;
+            }
+            for (int i = 0; i < pv.record_mealtotal.Length; i++)
+            {
+                pv.record_mealtotal[i] = 0; ;
+            }
         }
 
         // REFRESHING DATA ON DB
@@ -234,7 +258,7 @@ namespace backbone
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    PublicVariables.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));     
+                    pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));     
                 }
                 else
                 {
@@ -247,13 +271,13 @@ namespace backbone
                     if (reader.HasRows)
                     {          
                         reader.Read();
-                        PublicVariables.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID")) + 1;
-                        PublicVariables.isNewCustomer = true;
+                        pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID")) + 1;
+                        pv.isNewCustomer = true;
                     }
                     else
                     {
-                        PublicVariables.customerID = 1;
-                        PublicVariables.isNewCustomer = true;
+                        pv.customerID = 1;
+                        pv.isNewCustomer = true;
                     }
                     
                  
@@ -284,12 +308,12 @@ namespace backbone
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    PublicVariables.orderID = reader.GetInt32(reader.GetOrdinal("OrderID")) + 1;
+                    pv.orderID = reader.GetInt32(reader.GetOrdinal("OrderID")) + 1;
                     reader.Close();
                 }
                 else
                 {
-                    PublicVariables.orderID = 1;
+                    pv.orderID = 1;
                 }
             }
             catch (Exception ex)
@@ -309,14 +333,14 @@ namespace backbone
             try
             {
                 dbcon.OpenCon();
-                string query = $"SELECT OrderTime FROM ORDERS WHERE OrderID = {PublicVariables.orderID};";
+                string query = $"SELECT OrderTime FROM ORDERS WHERE OrderID = {pv.orderID};";
                 MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    PublicVariables.date = reader.GetString(reader.GetOrdinal("OrderTime"));
+                    pv.date = reader.GetString(reader.GetOrdinal("OrderTime"));
                     reader.Close();
                 }
                 else
@@ -355,14 +379,14 @@ namespace backbone
                         rowCount++; // to get the size of array
                     }
 
-                    PublicVariables.itemID = new int[rowCount];
-                    PublicVariables.itemName = new string[rowCount];
-                    PublicVariables.itemPrice = new double[rowCount];
-                    PublicVariables.itemDescription = new string[rowCount];
-                    PublicVariables.itemAvailability = new bool[rowCount];
+                    pv.itemID = new int[rowCount];
+                    pv.itemName = new string[rowCount];
+                    pv.itemPrice = new double[rowCount];
+                    pv.itemDescription = new string[rowCount];
+                    pv.itemAvailability = new bool[rowCount];
 
-                    PublicVariables.itemQuantity = new double[rowCount];
-                    PublicVariables.mealTotal = new double[rowCount];
+                    pv.itemQuantity = new double[rowCount];
+                    pv.mealTotal = new double[rowCount];
 
 
                     reader.Close();
@@ -372,11 +396,11 @@ namespace backbone
 
                     while (reader.Read())
                     {
-                        PublicVariables.itemID[i] = reader.GetInt32(reader.GetOrdinal("ItemID"));
-                        PublicVariables.itemName[i] = reader.GetString(reader.GetOrdinal("ItemName"));
-                        PublicVariables.itemPrice[i] = reader.GetDouble(reader.GetOrdinal("Price"));
-                        PublicVariables.itemDescription[i] = reader.GetString(reader.GetOrdinal("Description"));
-                        PublicVariables.itemAvailability[i] = reader.GetBoolean(reader.GetOrdinal("Availability"));
+                        pv.itemID[i] = reader.GetInt32(reader.GetOrdinal("ItemID"));
+                        pv.itemName[i] = reader.GetString(reader.GetOrdinal("ItemName"));
+                        pv.itemPrice[i] = reader.GetDouble(reader.GetOrdinal("Price"));
+                        pv.itemDescription[i] = reader.GetString(reader.GetOrdinal("Description"));
+                        pv.itemAvailability[i] = reader.GetBoolean(reader.GetOrdinal("Availability"));
 
                         i++;
                     }
@@ -428,7 +452,7 @@ namespace backbone
 
             if (index <= 9 && index >= 0)
             {
-                if (PublicVariables.itemAvailability[index])
+                if (pv.itemAvailability[index])
                 {
                     if (System.IO.File.Exists(maindish[index]))
                     {
@@ -455,7 +479,7 @@ namespace backbone
             }
             else if (index <= 14 && index >= 10)
             {
-                if (PublicVariables.itemAvailability[index])
+                if (pv.itemAvailability[index])
                 {
                     if (System.IO.File.Exists(sidedish[index - 10]))
                     {
@@ -482,7 +506,7 @@ namespace backbone
             }
             else if (index <= 21 && index >= 15)
             {
-                if (PublicVariables.itemAvailability[index])
+                if (pv.itemAvailability[index])
                 {
                     if (System.IO.File.Exists(beverage[index - 15]))
                     {
@@ -610,7 +634,7 @@ namespace backbone
             string[] imagePaths = new string[10];
             for (int i = 0; i < 10; i++)
             {
-                if (PublicVariables.itemAvailability[i])
+                if (pv.itemAvailability[i])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\maindish{i + 1:D2}.png";
                 }
@@ -631,7 +655,7 @@ namespace backbone
             string[] imagePaths = new string[5];
             for (int i = 0; i < 5; i++)
             {
-                if (PublicVariables.itemAvailability[i + 10])
+                if (pv.itemAvailability[i + 10])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\sidedish{i + 1:D2}.png";
                 }
@@ -652,7 +676,7 @@ namespace backbone
             string[] imagePaths = new string[7];
             for (int i = 0; i < 7; i++)
             {
-                if (PublicVariables.itemAvailability[i + 15])
+                if (pv.itemAvailability[i + 15])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\beverage{i + 1:D2}.png";
                 }
@@ -674,7 +698,7 @@ namespace backbone
             string[] imagePaths = new string[10];
             for (int i = 0; i < 10; i++)
             {
-                if (PublicVariables.itemAvailability[i])
+                if (pv.itemAvailability[i])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\maindish{i + 1:D2}.png";
                 }
@@ -695,7 +719,7 @@ namespace backbone
             string[] imagePaths = new string[5];
             for (int i = 0; i < 5; i++)
             {
-                if (PublicVariables.itemAvailability[i + 10])
+                if (pv.itemAvailability[i + 10])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\sidedish{i + 1:D2}.png";
                 }
@@ -716,7 +740,7 @@ namespace backbone
             string[] imagePaths = new string[7];
             for (int i = 0; i < 7; i++)
             {
-                if (PublicVariables.itemAvailability[i + 15])
+                if (pv.itemAvailability[i + 15])
                 {
                     imagePaths[i] = $"C:\\Users\\daryll\\OneDrive\\Documents\\Project\\backbone\\backbone\\picture\\order\\beverage{i + 1:D2}.png";
                 }
@@ -759,15 +783,15 @@ namespace backbone
         public void showItemOnDT(DataGridView dtv)
         {
             dtv.Rows.Clear();
-            for (int i = 0; i < PublicVariables.itemID.Length; i++)
+            for (int i = 0; i < pv.itemID.Length; i++)
             {
-                if (PublicVariables.itemQuantity[i] > 0)
+                if (pv.itemQuantity[i] > 0)
                 {
                     dtv.Rows.Add(
-                        PublicVariables.itemID[i],
-                        PublicVariables.itemName[i],
-                        PublicVariables.itemQuantity[i],
-                        PublicVariables.mealTotal[i].ToString("N2")
+                        pv.itemID[i],
+                        pv.itemName[i],
+                        pv.itemQuantity[i],
+                        pv.mealTotal[i].ToString("N2")
                                 );
                 }
 
@@ -788,9 +812,9 @@ namespace backbone
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 reader.Read();
-                PublicVariables.username = reader.GetString(reader.GetOrdinal("Username"));
-                PublicVariables.password = reader.GetString(reader.GetOrdinal("Password"));
-                PublicVariables.verification = reader.GetString(reader.GetOrdinal("Verification"));
+                pv.username = reader.GetString(reader.GetOrdinal("Username"));
+                pv.password = reader.GetString(reader.GetOrdinal("Password"));
+                pv.verification = reader.GetString(reader.GetOrdinal("Verification"));
                 reader.Close();
             }
             catch (Exception ex)
@@ -831,7 +855,7 @@ namespace backbone
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 reader.Read();
-                PublicVariables.currentPrice = reader.GetInt32(reader.GetOrdinal("Price"));
+                pv.currentPrice = reader.GetInt32(reader.GetOrdinal("Price"));
 
             }
             catch (Exception ex)
@@ -874,6 +898,8 @@ namespace backbone
         }
         public void getRecordsInfo()
         {
+            // Customer info
+
             try
             {
                 dbcon.OpenCon();
@@ -906,73 +932,9 @@ namespace backbone
             {
                 dbcon.CloseCon();
             }
-        }
 
-        public void deleteRecords()
-        {
-            try
-            {
-                dbcon.OpenCon();
-                string query = $"DELETE FROM Orders WHERE OrderID = {PublicVariables.orderID};";
-                MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                dbcon.CloseCon();
-            }
-        }
+            // Item info
 
-        public void deleteCustomer()
-        {
-            // to delete customer with no records
-            try
-            {
-                dbcon.OpenCon();
-                string query = "DELETE FROM Customer WHERE CustomerID NOT IN(SELECT DISTINCT CustomerID FROM Orders);";
-                MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                dbcon.CloseCon();
-            }
-        }
-
-
-
-
-
-        //public void Exec(string query)
-        //{
-        //    try
-        //    {
-        //        dbcon.OpenCon();
-        //        MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
-        //        cmd.ExecuteNonQuery();
-        //        // MessageBox.Show("Updated OrderItem!");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        dbcon.CloseCon();
-        //    }
-        //}
-
-
-        public void getDataForView()
-        {
             int i = 0;
             int rowCount = 0;
 
@@ -1024,5 +986,45 @@ namespace backbone
                 dbcon.CloseCon();
             }
         }
+
+        public void deleteRecords()
+        {
+            try
+            {
+                dbcon.OpenCon();
+                string query = $"DELETE FROM Orders WHERE OrderID = {pv.orderID};";
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbcon.CloseCon();
+            }
+        }
+
+        public void deleteCustomer()
+        {
+            // to delete customer with no records
+            try
+            {
+                dbcon.OpenCon();
+                string query = "DELETE FROM Customer WHERE CustomerID NOT IN(SELECT DISTINCT CustomerID FROM Orders);";
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbcon.CloseCon();
+            }
+        }
+
     }
 }

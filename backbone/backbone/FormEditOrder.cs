@@ -26,7 +26,7 @@ namespace backbone
             lblItemName.Text = pv.itemName[pv.indexItem].ToString();
             lblPrice.Text = pv.itemPrice[pv.indexItem].ToString("N2");
             lblQuantity.Text = pv.itemQuantity[pv.indexItem].ToString();
-            lblMealTotal.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+            lblMealTotal.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
 
         }
 
@@ -74,7 +74,7 @@ namespace backbone
             pv.totalBill += pv.itemPrice[pv.indexItem];
             pv.totalQuantity += 1;
             lblQuantity.Text = pv.itemQuantity[pv.indexItem].ToString();
-            lblMealTotal.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+            lblMealTotal.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
         }
 
         private void minus()
@@ -84,7 +84,7 @@ namespace backbone
             pv.totalBill -= pv.itemPrice[pv.indexItem];
             pv.totalQuantity -= 1;
             lblQuantity.Text = pv.itemQuantity[pv.indexItem].ToString();
-            lblMealTotal.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+            lblMealTotal.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
         }
 
         private void getBack()

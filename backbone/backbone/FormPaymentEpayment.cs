@@ -15,7 +15,7 @@ namespace backbone
         public FormPaymentEpayment()
         {
             InitializeComponent();
-            lblPayment.Text = $"PHP {PublicVariables.totalBill.ToString("N2")}";
+            lblPayment.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
         }
 
         private void button1_Click(object sender, EventArgs e)

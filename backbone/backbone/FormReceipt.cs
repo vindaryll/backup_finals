@@ -22,9 +22,9 @@ namespace backbone
 
         private void showData()
         {
-            int initialTop = 50;
-            int textBoxHeight = 24;
-            int verticalSpacing = 24;
+            int initialTop = 11;
+            int textBoxHeight = 31;
+            int verticalSpacing = 31;
 
             for (int i = 0; i < 22; i++)
             {
@@ -33,24 +33,24 @@ namespace backbone
                     // Create Label for Item Name
                     Label itemNameLabel = new Label();
                     itemNameLabel.Text = $"{PublicVariables.itemName[i]}";
-                    itemNameLabel.Location = new System.Drawing.Point(34, initialTop);
-                    itemNameLabel.Size = new System.Drawing.Size(153, textBoxHeight);
+                    itemNameLabel.Location = new System.Drawing.Point(18, initialTop);
+                    itemNameLabel.Size = new System.Drawing.Size(361, textBoxHeight);
                     itemNameLabel.TextAlign = ContentAlignment.MiddleLeft;
                     panel1.Controls.Add(itemNameLabel);
 
                     // Create Label for Quantity
                     Label quantityLabel = new Label();
                     quantityLabel.Text = $"{PublicVariables.itemQuantity[i]}";
-                    quantityLabel.Location = new System.Drawing.Point(401, initialTop);
-                    quantityLabel.Size = new System.Drawing.Size(69, textBoxHeight);
+                    quantityLabel.Location = new System.Drawing.Point(406, initialTop);
+                    quantityLabel.Size = new System.Drawing.Size(111, textBoxHeight);
                     quantityLabel.TextAlign = ContentAlignment.MiddleCenter;
                     panel1.Controls.Add(quantityLabel);
 
-                    // Create Label for Subprice
+                    // Create Label for Sub price
                     Label subpriceLabel = new Label();
                     subpriceLabel.Text = PublicVariables.mealTotal[i].ToString("N2");
-                    subpriceLabel.Location = new System.Drawing.Point(531, initialTop);
-                    subpriceLabel.Size = new System.Drawing.Size(69, textBoxHeight);
+                    subpriceLabel.Location = new System.Drawing.Point(534, initialTop);
+                    subpriceLabel.Size = new System.Drawing.Size(168, textBoxHeight);
                     subpriceLabel.TextAlign = ContentAlignment.MiddleCenter;
                     panel1.Controls.Add(subpriceLabel);
 
@@ -65,9 +65,9 @@ namespace backbone
             lblPhone.Text = PublicVariables.customerContact.ToString();
             lblDate.Text = PublicVariables.date;
             lblMop.Text = PublicVariables.paymentMethod;
-            lblTotal.Text = PublicVariables.totalBill.ToString("N2");
-            lblPayment.Text = PublicVariables.paymentAmount.ToString("N2");
-            lblChange.Text = PublicVariables.changeAmount.ToString("N2");
+            lblTotal.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
+            lblPayment.Text = "PHP " + PublicVariables.paymentAmount.ToString("N2");
+            lblChange.Text = "PHP " + PublicVariables.changeAmount.ToString("N2");
 
         }
 

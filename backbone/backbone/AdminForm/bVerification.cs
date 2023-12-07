@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using pv = backbone.PublicVariables;
+
 namespace backbone.AdminForm
 {
     public partial class bVerification : Form
@@ -33,7 +35,7 @@ namespace backbone.AdminForm
             }
             else
             {
-                if(verify == PublicVariables.verification)
+                if(verify == pv.verification)
                 {
                     MessageBox.Show("Access granted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminForm.bChangepass form = new();

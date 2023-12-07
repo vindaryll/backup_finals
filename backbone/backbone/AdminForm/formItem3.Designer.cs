@@ -50,6 +50,13 @@
             this.btnAvailability6 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnUpdatePrice6 = new System.Windows.Forms.Button();
+            this.name1 = new System.Windows.Forms.Label();
+            this.name2 = new System.Windows.Forms.Label();
+            this.name3 = new System.Windows.Forms.Label();
+            this.name4 = new System.Windows.Forms.Label();
+            this.name5 = new System.Windows.Forms.Label();
+            this.name6 = new System.Windows.Forms.Label();
+            this.name7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,7 +68,7 @@
             // 
             // btnAvailability5
             // 
-            this.btnAvailability5.Location = new System.Drawing.Point(529, 982);
+            this.btnAvailability5.Location = new System.Drawing.Point(529, 1012);
             this.btnAvailability5.Name = "btnAvailability5";
             this.btnAvailability5.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability5.TabIndex = 101;
@@ -79,7 +86,7 @@
             // 
             // btnUpdatePrice5
             // 
-            this.btnUpdatePrice5.Location = new System.Drawing.Point(310, 982);
+            this.btnUpdatePrice5.Location = new System.Drawing.Point(310, 1012);
             this.btnUpdatePrice5.Name = "btnUpdatePrice5";
             this.btnUpdatePrice5.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice5.TabIndex = 99;
@@ -99,7 +106,7 @@
             // 
             // btnAvailability4
             // 
-            this.btnAvailability4.Location = new System.Drawing.Point(529, 763);
+            this.btnAvailability4.Location = new System.Drawing.Point(529, 793);
             this.btnAvailability4.Name = "btnAvailability4";
             this.btnAvailability4.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability4.TabIndex = 97;
@@ -117,7 +124,7 @@
             // 
             // btnUpdatePrice4
             // 
-            this.btnUpdatePrice4.Location = new System.Drawing.Point(310, 763);
+            this.btnUpdatePrice4.Location = new System.Drawing.Point(310, 793);
             this.btnUpdatePrice4.Name = "btnUpdatePrice4";
             this.btnUpdatePrice4.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice4.TabIndex = 95;
@@ -127,7 +134,7 @@
             // 
             // btnAvailability3
             // 
-            this.btnAvailability3.Location = new System.Drawing.Point(529, 547);
+            this.btnAvailability3.Location = new System.Drawing.Point(529, 577);
             this.btnAvailability3.Name = "btnAvailability3";
             this.btnAvailability3.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability3.TabIndex = 94;
@@ -145,7 +152,7 @@
             // 
             // btnUpdatePrice3
             // 
-            this.btnUpdatePrice3.Location = new System.Drawing.Point(310, 547);
+            this.btnUpdatePrice3.Location = new System.Drawing.Point(310, 577);
             this.btnUpdatePrice3.Name = "btnUpdatePrice3";
             this.btnUpdatePrice3.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice3.TabIndex = 92;
@@ -155,7 +162,7 @@
             // 
             // btnAvailability2
             // 
-            this.btnAvailability2.Location = new System.Drawing.Point(529, 337);
+            this.btnAvailability2.Location = new System.Drawing.Point(529, 367);
             this.btnAvailability2.Name = "btnAvailability2";
             this.btnAvailability2.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability2.TabIndex = 91;
@@ -173,7 +180,7 @@
             // 
             // btnUpdatePrice2
             // 
-            this.btnUpdatePrice2.Location = new System.Drawing.Point(310, 337);
+            this.btnUpdatePrice2.Location = new System.Drawing.Point(310, 367);
             this.btnUpdatePrice2.Name = "btnUpdatePrice2";
             this.btnUpdatePrice2.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice2.TabIndex = 89;
@@ -183,7 +190,7 @@
             // 
             // btnAvailability1
             // 
-            this.btnAvailability1.Location = new System.Drawing.Point(529, 128);
+            this.btnAvailability1.Location = new System.Drawing.Point(529, 158);
             this.btnAvailability1.Name = "btnAvailability1";
             this.btnAvailability1.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability1.TabIndex = 88;
@@ -201,7 +208,7 @@
             // 
             // btnUpdatePrice1
             // 
-            this.btnUpdatePrice1.Location = new System.Drawing.Point(310, 128);
+            this.btnUpdatePrice1.Location = new System.Drawing.Point(310, 158);
             this.btnUpdatePrice1.Name = "btnUpdatePrice1";
             this.btnUpdatePrice1.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice1.TabIndex = 86;
@@ -211,7 +218,7 @@
             // 
             // btnAvailability7
             // 
-            this.btnAvailability7.Location = new System.Drawing.Point(529, 1419);
+            this.btnAvailability7.Location = new System.Drawing.Point(529, 1449);
             this.btnAvailability7.Name = "btnAvailability7";
             this.btnAvailability7.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability7.TabIndex = 107;
@@ -229,7 +236,7 @@
             // 
             // btnUpdatePrice7
             // 
-            this.btnUpdatePrice7.Location = new System.Drawing.Point(310, 1419);
+            this.btnUpdatePrice7.Location = new System.Drawing.Point(310, 1449);
             this.btnUpdatePrice7.Name = "btnUpdatePrice7";
             this.btnUpdatePrice7.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice7.TabIndex = 105;
@@ -239,7 +246,7 @@
             // 
             // btnAvailability6
             // 
-            this.btnAvailability6.Location = new System.Drawing.Point(529, 1200);
+            this.btnAvailability6.Location = new System.Drawing.Point(529, 1230);
             this.btnAvailability6.Name = "btnAvailability6";
             this.btnAvailability6.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability6.TabIndex = 104;
@@ -257,7 +264,7 @@
             // 
             // btnUpdatePrice6
             // 
-            this.btnUpdatePrice6.Location = new System.Drawing.Point(310, 1200);
+            this.btnUpdatePrice6.Location = new System.Drawing.Point(310, 1230);
             this.btnUpdatePrice6.Name = "btnUpdatePrice6";
             this.btnUpdatePrice6.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice6.TabIndex = 102;
@@ -265,11 +272,81 @@
             this.btnUpdatePrice6.UseVisualStyleBackColor = true;
             this.btnUpdatePrice6.Click += new System.EventHandler(this.btnUpdatePrice6_Click);
             // 
+            // name1
+            // 
+            this.name1.Location = new System.Drawing.Point(366, 106);
+            this.name1.Name = "name1";
+            this.name1.Size = new System.Drawing.Size(301, 49);
+            this.name1.TabIndex = 108;
+            this.name1.Text = "name1";
+            this.name1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name2
+            // 
+            this.name2.Location = new System.Drawing.Point(366, 315);
+            this.name2.Name = "name2";
+            this.name2.Size = new System.Drawing.Size(301, 49);
+            this.name2.TabIndex = 109;
+            this.name2.Text = "name2";
+            this.name2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name3
+            // 
+            this.name3.Location = new System.Drawing.Point(366, 525);
+            this.name3.Name = "name3";
+            this.name3.Size = new System.Drawing.Size(301, 49);
+            this.name3.TabIndex = 110;
+            this.name3.Text = "name3";
+            this.name3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name4
+            // 
+            this.name4.Location = new System.Drawing.Point(366, 741);
+            this.name4.Name = "name4";
+            this.name4.Size = new System.Drawing.Size(301, 49);
+            this.name4.TabIndex = 111;
+            this.name4.Text = "name4";
+            this.name4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name5
+            // 
+            this.name5.Location = new System.Drawing.Point(366, 960);
+            this.name5.Name = "name5";
+            this.name5.Size = new System.Drawing.Size(301, 49);
+            this.name5.TabIndex = 112;
+            this.name5.Text = "name5";
+            this.name5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name6
+            // 
+            this.name6.Location = new System.Drawing.Point(366, 1178);
+            this.name6.Name = "name6";
+            this.name6.Size = new System.Drawing.Size(301, 49);
+            this.name6.TabIndex = 113;
+            this.name6.Text = "name6";
+            this.name6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name7
+            // 
+            this.name7.Location = new System.Drawing.Point(366, 1397);
+            this.name7.Name = "name7";
+            this.name7.Size = new System.Drawing.Size(301, 49);
+            this.name7.TabIndex = 114;
+            this.name7.Text = "name7";
+            this.name7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // formItem3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.name7);
+            this.Controls.Add(this.name6);
+            this.Controls.Add(this.name5);
+            this.Controls.Add(this.name4);
+            this.Controls.Add(this.name3);
+            this.Controls.Add(this.name2);
+            this.Controls.Add(this.name1);
             this.Controls.Add(this.btnAvailability7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.btnUpdatePrice7);
@@ -330,5 +407,12 @@
         private Button btnAvailability6;
         private PictureBox pictureBox6;
         private Button btnUpdatePrice6;
+        private Label name1;
+        private Label name2;
+        private Label name3;
+        private Label name4;
+        private Label name5;
+        private Label name6;
+        private Label name7;
     }
 }

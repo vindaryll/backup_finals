@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using pv = backbone.PublicVariables;
+
 namespace backbone.AdminForm
 {
     public partial class eUpdatePrice : Form
@@ -20,9 +22,9 @@ namespace backbone.AdminForm
         }
         private void showdata()
         {
-            func.getCurrentPrice(PublicVariables.adminItemIndex);
-            lblPrice.Text = PublicVariables.currentPrice.ToString("N2");
-            func.picture(PublicVariables.adminItemIndex, pictureBox1);
+            func.getCurrentPrice(pv.adminItemIndex);
+            lblPrice.Text = "PHP " + pv.currentPrice.ToString("N2");
+            func.picture(pv.adminItemIndex, pictureBox1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace backbone.AdminForm
 
             if (double.TryParse(textBox1.Text, out price) && price >= 0) 
             {
-                func.updatePrice(price, PublicVariables.adminItemIndex);
+                func.updatePrice(price, pv.adminItemIndex);
                 MessageBox.Show("Price Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 func.getItemInfo();
                 showdata();

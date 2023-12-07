@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using pv = backbone.PublicVariables;
+
 namespace backbone.AdminForm
 {
     public partial class aLoginForm : Form
@@ -39,7 +41,7 @@ namespace backbone.AdminForm
             }
             else
             {
-                if(username == PublicVariables.username && password == PublicVariables.password)
+                if(username == pv.username && password == pv.password)
                 {
                     MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminForm.cAdmin1 form = new();

@@ -17,7 +17,7 @@ namespace backbone
         {
             InitializeComponent();
             showData();
-            lblTotalBill.Text = PublicVariables.totalBill.ToString("N2");
+            lblTotalBill.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
             lblTotalQuantity.Text = PublicVariables.totalQuantity.ToString();
         }
         
@@ -48,29 +48,32 @@ namespace backbone
             form.Show();
         }
 
-        private void FormViewOrder_Load(object sender, EventArgs e)
+        private void dataGridView1_mouseclick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
-        }
-
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            string? itemIDString = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            if(int.TryParse(itemIDString, out int itemID))
+            try
             {
-                if(itemID > 0)
+                string? itemIDString = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                if (int.TryParse(itemIDString, out int itemID))
                 {
-                    PublicVariables.indexItem = itemID - 1;
-                    FormEditOrder form = new();
-                    form.Show();
-                    this.Close();
-                }
-                else
-                {
-                    // nothing to show
+                    if (itemID > 0)
+                    {
+                        PublicVariables.indexItem = itemID - 1;
+                        FormEditOrder form = new();
+                        form.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        // nothing to show
+                    }
                 }
             }
+            catch
+            {
+                // nothing to show
+            }
+            
         }
     }
 }

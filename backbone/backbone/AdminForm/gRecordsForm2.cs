@@ -31,10 +31,8 @@ namespace backbone.AdminForm
         }
         private void showData()
         {
-            // string query = $"SELECT i.ItemID, i.ItemName, oi.Quantity, oi.MealTotal\r\nFROM Item AS i\r\nJOIN OrderItem AS oi ON oi.ItemID = i.ItemID\r\nJOIN Orders AS o ON o.OrderID = oi.OrderID\r\nWHERE o.OrderID = {PublicVariables.orderID} \r\nGROUP BY i.ItemName, oi.Quantity, oi.MealTotal \r\nORDER BY i.ItemID";
+            func.getRecordsInfo();
 
-            // func.Displaydata(dataGridView1, query);
-            func.getDataForView();
             int initialTop = 59;
             int textBoxHeight = 31;
             int verticalSpacing = 31;
@@ -67,7 +65,7 @@ namespace backbone.AdminForm
 
                 // Create Label for Meal Total
                 Label mealTotalLabel = new Label();
-                mealTotalLabel.Text = pv.record_quantity[i].ToString("N2");
+                mealTotalLabel.Text = pv.record_mealtotal[i].ToString("N2");
                 mealTotalLabel.Location = new System.Drawing.Point(587, initialTop);
                 mealTotalLabel.Size = new System.Drawing.Size(105, textBoxHeight);
                 mealTotalLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -76,13 +74,13 @@ namespace backbone.AdminForm
                 initialTop += verticalSpacing;
             }
 
-            lblTotal.Text = "PHP " + PublicVariables.totalBill.ToString("N2");
-            lblPayment.Text = "PHP " + PublicVariables.paymentAmount.ToString("N2");
-            lblChange.Text = "PHP " + PublicVariables.changeAmount.ToString("N2") ;
-            lblCustomerID.Text = PublicVariables.customerID.ToString();
-            lblName.Text = PublicVariables.customerName.ToString();
-            lblContact.Text = PublicVariables.customerContact.ToString();
-            lblAddress.Text = PublicVariables.customerAddress.ToString();
+            lblTotal.Text = "PHP " + pv.totalBill.ToString("N2");
+            lblPayment.Text = "PHP " + pv.paymentAmount.ToString("N2");
+            lblChange.Text = "PHP " + pv.changeAmount.ToString("N2") ;
+            lblCustomerID.Text = pv.customerID.ToString();
+            lblName.Text = pv.customerName.ToString();
+            lblContact.Text = pv.customerContact.ToString();
+            lblAddress.Text = pv.customerAddress.ToString();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

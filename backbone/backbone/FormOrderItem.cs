@@ -32,7 +32,7 @@ namespace backbone
             lbl2.Text = pv.itemPrice[pv.indexItem].ToString("N2");
             lbl3.Text = pv.itemDescription[pv.indexItem].ToString();
             lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
-            lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+            lbl5.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace backbone
             pv.totalBill += pv.itemPrice[pv.indexItem];
             pv.totalQuantity += 1;
             lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
-            lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+            lbl5.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace backbone
                 pv.totalBill -= pv.itemPrice[pv.indexItem];
                 pv.totalQuantity -= 1;
                 lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
-                lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
+                lbl5.Text = "PHP " + pv.mealTotal[pv.indexItem].ToString("N2");
             }
             else
             {

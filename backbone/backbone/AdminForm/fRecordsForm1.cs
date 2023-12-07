@@ -28,7 +28,7 @@ namespace backbone.AdminForm
             form.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void refresh_click(object sender, EventArgs e)
         {
             refresh();
         }
@@ -41,17 +41,23 @@ namespace backbone.AdminForm
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            string? orderIDString = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            if (int.TryParse(orderIDString, out int orderID))
+            try
             {
+                string? orderIDString = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-                pv.orderID = orderID;
-                func.getRecordsInfo();
+                if (int.TryParse(orderIDString, out int orderID))
+                {
+
+                    pv.orderID = orderID;
+                }
+                else
+                {
+                    pv.orderID = 0;
+                }
             }
-            else
+            catch
             {
-                pv.orderID = 0;
+                refresh();
             }
 
         }
@@ -90,8 +96,6 @@ namespace backbone.AdminForm
                     func.refreshOrderTransaction();
                     func.refreshOrders();
                     MessageBox.Show($"Order no. {pv.orderID} has been deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    pv.orderID = 0;
-
                     refresh();
 
                 }
@@ -105,6 +109,7 @@ namespace backbone.AdminForm
             string query = "SELECT o.OrderID, c.CustomerName, o.OrderTime AS Date, o.PaymentMethod\r\nFROM Customer AS c\r\nJOIN Orders AS o ON c.CustomerID = o.CustomerID\r\nJOIN OrderItem AS oi ON o.OrderID = oi.OrderID\r\nJOIN OrderTransaction as ot ON ot.OrderID = o.OrderID\r\nGROUP BY o.OrderID, c.customerName\r\nORDER BY Date";
             func.Displaydata(dataGridView1, query);
             textBox1.Text = string.Empty;
+            pv.orderID = 0;
         }
     }
 }
