@@ -13,7 +13,7 @@
         {
             formCustomer fc = new formCustomer();
             this.Close();
-            fc.ShowDialog();
+            fc.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

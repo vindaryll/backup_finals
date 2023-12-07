@@ -110,6 +110,7 @@ namespace backbone.AdminForm
             func.Displaydata(dataGridView1, query);
             textBox1.Text = string.Empty;
             pv.orderID = 0;
+            dataGridView1.ClearSelection();
         }
     }
 }
