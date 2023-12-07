@@ -36,6 +36,8 @@
             this.lblTotalBill = new System.Windows.Forms.Label();
             this.btnVoidOrder = new System.Windows.Forms.Button();
             this.btnViewOrder = new System.Windows.Forms.Button();
+            this.lblTotalQuantity = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -79,24 +81,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 856);
+            this.label1.Location = new System.Drawing.Point(473, 856);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 31;
-            this.label1.Text = "TOTAL BILL";
+            this.label1.Text = "TOTAL BILL:";
             // 
             // lblTotalBill
             // 
             this.lblTotalBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTotalBill.Location = new System.Drawing.Point(467, 847);
+            this.lblTotalBill.Location = new System.Drawing.Point(563, 847);
             this.lblTotalBill.Name = "lblTotalBill";
-            this.lblTotalBill.Size = new System.Drawing.Size(353, 39);
+            this.lblTotalBill.Size = new System.Drawing.Size(225, 39);
             this.lblTotalBill.TabIndex = 30;
             this.lblTotalBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVoidOrder
             // 
-            this.btnVoidOrder.Location = new System.Drawing.Point(174, 707);
+            this.btnVoidOrder.Location = new System.Drawing.Point(174, 696);
             this.btnVoidOrder.Name = "btnVoidOrder";
             this.btnVoidOrder.Size = new System.Drawing.Size(225, 91);
             this.btnVoidOrder.TabIndex = 29;
@@ -106,19 +108,39 @@
             // 
             // btnViewOrder
             // 
-            this.btnViewOrder.Location = new System.Drawing.Point(563, 707);
+            this.btnViewOrder.Location = new System.Drawing.Point(563, 696);
             this.btnViewOrder.Name = "btnViewOrder";
-            this.btnViewOrder.Size = new System.Drawing.Size(257, 91);
+            this.btnViewOrder.Size = new System.Drawing.Size(225, 91);
             this.btnViewOrder.TabIndex = 28;
             this.btnViewOrder.Text = "VIEW ORDERS";
             this.btnViewOrder.UseVisualStyleBackColor = true;
             this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
+            // 
+            // lblTotalQuantity
+            // 
+            this.lblTotalQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTotalQuantity.Location = new System.Drawing.Point(174, 847);
+            this.lblTotalQuantity.Name = "lblTotalQuantity";
+            this.lblTotalQuantity.Size = new System.Drawing.Size(225, 39);
+            this.lblTotalQuantity.TabIndex = 32;
+            this.lblTotalQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(63, 847);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 43);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "TOTAL ITEM QUANTITY:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormOrderInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 947);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblTotalQuantity);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTotalBill);
             this.Controls.Add(this.btnVoidOrder);
@@ -144,5 +166,7 @@
         private Label lblTotalBill;
         private Button btnVoidOrder;
         private Button btnViewOrder;
+        private Label lblTotalQuantity;
+        private Label label3;
     }
 }

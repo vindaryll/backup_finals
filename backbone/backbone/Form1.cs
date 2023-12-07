@@ -10,6 +10,7 @@ namespace backbone
             func.refreshOrders();
             func.refreshOrderTransaction();
             func.refreshOrderItem();
+            func.VarReset();
             func.getItemInfo();
         }
 

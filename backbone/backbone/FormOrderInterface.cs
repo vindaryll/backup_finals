@@ -17,17 +17,20 @@ namespace backbone
         public FormOrderInterface()
         {
             InitializeComponent();
+            showData();
+        }
+
+        private void showData()
+        {
             lblTotalBill.Text = PublicVariables.totalBill.ToString("N2");
+            lblTotalQuantity.Text = PublicVariables.totalQuantity.ToString();
 
             panel1.Controls.Clear();
             formMainDish form = new();
             form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             panel1.BringToFront();
-
-
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,11 +63,16 @@ namespace backbone
 
         private void btnVoidOrder_Click(object sender, EventArgs e)
         {
-            func.VarReset();
-            Form1 form = new Form1();
-            MessageBox.Show("ORDER'S SUCCESSFULLY CANCELED");
-            form.Show();
-            this.Close();
+            DialogResult result = MessageBox.Show($"Do you wanna void this order, {PublicVariables.customerName}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                func.VarReset();
+                Form1 form = new Form1();
+                MessageBox.Show("ORDER'S SUCCESSFULLY CANCELED");
+                form.Show();
+                this.Close();
+            }
+            // do nothing if the user clicks "no"
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)

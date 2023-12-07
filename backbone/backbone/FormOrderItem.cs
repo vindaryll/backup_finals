@@ -33,7 +33,6 @@ namespace backbone
             lbl3.Text = pv.itemDescription[pv.indexItem].ToString();
             lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
             lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
-            label1.Text = pv.totalBill.ToString("N2");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,8 +43,6 @@ namespace backbone
             pv.totalQuantity += 1;
             lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
             lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
-            label1.Text = pv.totalBill.ToString("N2");
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,21 +55,23 @@ namespace backbone
                 pv.totalQuantity -= 1;
                 lbl4.Text = pv.itemQuantity[pv.indexItem].ToString();
                 lbl5.Text = pv.mealTotal[pv.indexItem].ToString("N2");
-                label1.Text = pv.totalBill.ToString("N2");
-
             }
             else
             {
                 // nothing to show
             }
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (pv.itemQuantity[pv.indexItem] > 0)
+            {
+                MessageBox.Show("Order Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             FormOrderInterface form = new FormOrderInterface();
             form.Show();
             this.Close();
         }
+
     }
 }

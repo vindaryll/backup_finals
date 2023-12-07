@@ -92,12 +92,13 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(63, 164);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(623, 613);
+            this.panel1.Size = new System.Drawing.Size(623, 614);
             this.panel1.TabIndex = 4;
             // 
             // label7
@@ -176,7 +177,7 @@
             // 
             this.lblOrderID.Location = new System.Drawing.Point(138, 36);
             this.lblOrderID.Name = "lblOrderID";
-            this.lblOrderID.Size = new System.Drawing.Size(213, 30);
+            this.lblOrderID.Size = new System.Drawing.Size(171, 30);
             this.lblOrderID.TabIndex = 10;
             this.lblOrderID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -184,7 +185,7 @@
             // 
             this.lblName.Location = new System.Drawing.Point(121, 70);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(174, 30);
+            this.lblName.Size = new System.Drawing.Size(324, 30);
             this.lblName.TabIndex = 11;
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -192,7 +193,7 @@
             // 
             this.lblAddress.Location = new System.Drawing.Point(134, 106);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(174, 30);
+            this.lblAddress.Size = new System.Drawing.Size(311, 30);
             this.lblAddress.TabIndex = 12;
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 

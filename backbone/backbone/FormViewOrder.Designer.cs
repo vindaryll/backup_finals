@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTotalBill = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mealTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalBill = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblTotalQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,35 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(880, 365);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // itemID
+            // 
+            this.itemID.HeaderText = "ITEM ID";
+            this.itemID.MinimumWidth = 6;
+            this.itemID.Name = "itemID";
+            this.itemID.Width = 97;
+            // 
+            // itemName
+            // 
+            this.itemName.HeaderText = "ITEM NAME";
+            this.itemName.MinimumWidth = 6;
+            this.itemName.Name = "itemName";
+            this.itemName.Width = 350;
+            // 
+            // ItemQuantity
+            // 
+            this.ItemQuantity.HeaderText = "QUANTITY";
+            this.ItemQuantity.MinimumWidth = 6;
+            this.ItemQuantity.Name = "ItemQuantity";
+            this.ItemQuantity.Width = 189;
+            // 
+            // mealTotal
+            // 
+            this.mealTotal.HeaderText = "MEAL TOTAL";
+            this.mealTotal.MinimumWidth = 6;
+            this.mealTotal.Name = "mealTotal";
+            this.mealTotal.Width = 189;
             // 
             // label1
             // 
@@ -95,34 +124,6 @@
             this.button2.Text = "PROCEED TO PAYMENT";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // itemID
-            // 
-            this.itemID.HeaderText = "ITEM ID";
-            this.itemID.MinimumWidth = 6;
-            this.itemID.Name = "itemID";
-            this.itemID.Width = 97;
-            // 
-            // itemName
-            // 
-            this.itemName.HeaderText = "ITEM NAME";
-            this.itemName.MinimumWidth = 6;
-            this.itemName.Name = "itemName";
-            this.itemName.Width = 350;
-            // 
-            // ItemQuantity
-            // 
-            this.ItemQuantity.HeaderText = "QUANTITY";
-            this.ItemQuantity.MinimumWidth = 6;
-            this.ItemQuantity.Name = "ItemQuantity";
-            this.ItemQuantity.Width = 189;
-            // 
-            // mealTotal
-            // 
-            this.mealTotal.HeaderText = "MEAL TOTAL";
-            this.mealTotal.MinimumWidth = 6;
-            this.mealTotal.Name = "mealTotal";
-            this.mealTotal.Width = 189;
             // 
             // lblTotalQuantity
             // 

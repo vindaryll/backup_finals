@@ -25,7 +25,7 @@ namespace backbone
         {
             dataGridView1.Rows.Clear();
 
-            //pre-define since 
+            //pre-define or p'wedeng kami na ang mag-edit
             //dataGridView1.Columns.Add("itemID", "ITEM ID");
             //dataGridView1.Columns.Add("itemName", "ITEM NAME");
             //dataGridView1.Columns.Add("itemQuantity", "ITEM QUANTITY");
@@ -51,6 +51,26 @@ namespace backbone
         private void FormViewOrder_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            string? itemIDString = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            if(int.TryParse(itemIDString, out int itemID))
+            {
+                if(itemID > 0)
+                {
+                    PublicVariables.indexItem = itemID - 1;
+                    FormEditOrder form = new();
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    // nothing to show
+                }
+            }
         }
     }
 }

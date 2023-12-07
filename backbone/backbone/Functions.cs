@@ -7,6 +7,8 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using backbone;
+
+using pv = backbone.PublicVariables;
 namespace backbone
 {
     public class Functions
@@ -765,7 +767,7 @@ namespace backbone
                         PublicVariables.itemID[i],
                         PublicVariables.itemName[i],
                         PublicVariables.itemQuantity[i],
-                        PublicVariables.mealTotal[i]
+                        PublicVariables.mealTotal[i].ToString("N2")
                                 );
                 }
 
@@ -882,13 +884,13 @@ namespace backbone
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    PublicVariables.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));
-                    PublicVariables.customerName = reader.GetString(reader.GetOrdinal("CustomerName"));
-                    PublicVariables.customerAddress = reader.GetString(reader.GetOrdinal("Address"));
-                    PublicVariables.customerContact = reader.GetString(reader.GetOrdinal("ContactNumber"));
-                    PublicVariables.totalBill = reader.GetDouble(reader.GetOrdinal("TotalBill"));
-                    PublicVariables.paymentAmount = reader.GetDouble(reader.GetOrdinal("Payment"));
-                    PublicVariables.changeAmount = reader.GetDouble(reader.GetOrdinal("Change"));
+                    pv.customerID = reader.GetInt32(reader.GetOrdinal("CustomerID"));
+                    pv.customerName = reader.GetString(reader.GetOrdinal("CustomerName"));
+                    pv.customerAddress = reader.GetString(reader.GetOrdinal("Address"));
+                    pv.customerContact = reader.GetString(reader.GetOrdinal("ContactNumber"));
+                    pv.totalBill = reader.GetDouble(reader.GetOrdinal("TotalBill"));
+                    pv.paymentAmount = reader.GetDouble(reader.GetOrdinal("Payment"));
+                    pv.changeAmount = reader.GetDouble(reader.GetOrdinal("Change"));
                     reader.Close();
                 }
                 else
@@ -967,5 +969,60 @@ namespace backbone
         //        dbcon.CloseCon();
         //    }
         //}
+
+
+        public void getDataForView()
+        {
+            int i = 0;
+            int rowCount = 0;
+
+            try
+            {
+                dbcon.OpenCon();
+
+                string query = $"SELECT i.ItemID, i.ItemName, oi.Quantity, oi.MealTotal FROM Item AS i JOIN OrderItem AS oi ON oi.ItemID = i.ItemID JOIN Orders AS o ON o.OrderID = oi.OrderID WHERE o.OrderID = {PublicVariables.orderID} GROUP BY i.ItemName, oi.Quantity, oi.MealTotal ORDER BY i.ItemID";
+                MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        rowCount++; // to get the size of array
+                    }
+                    pv.record_itemID = new int[rowCount];
+                    pv.record_itemName = new string[rowCount];
+                    pv.record_quantity = new double[rowCount];
+                    pv.record_mealtotal = new double[rowCount];
+
+
+                    reader.Close();
+
+                    // start new reading
+                    reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        pv.record_itemID[i] = reader.GetInt32(reader.GetOrdinal("ItemID"));
+                        pv.record_itemName[i] = reader.GetString(reader.GetOrdinal("ItemName"));
+                        pv.record_quantity[i] = reader.GetDouble(reader.GetOrdinal("Quantity"));
+                        pv.record_mealtotal[i] = reader.GetDouble(reader.GetOrdinal("MealTotal"));
+                        i++;
+                    }
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                dbcon.CloseCon();
+            }
+        }
     }
 }

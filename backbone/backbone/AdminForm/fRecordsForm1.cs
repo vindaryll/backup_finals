@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using pv = backbone.PublicVariables;
+
 namespace backbone.AdminForm
 {
     public partial class fRecordsForm1 : Form
@@ -33,13 +35,7 @@ namespace backbone.AdminForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string query = $"SELECT o.OrderID, c.CustomerName, o.OrderTime AS Date, o.PaymentMethod\r\nFROM Customer AS c\r\nJOIN Orders AS o ON c.CustomerID = o.CustomerID\r\nJOIN OrderItem AS oi ON o.OrderID = oi.OrderID\r\nJOIN OrderTransaction as ot ON ot.OrderID = o.OrderID\r\nWHERE c.CustomerName LIKE '{textBox1.Text}%'\r\nGROUP BY o.OrderID, c.customerName\r\nORDER BY Date";
-            func.Displaydata(dataGridView1, query);
-        }
-
-        private void refresh()
-        {
-            string query = "SELECT o.OrderID, c.CustomerName, o.OrderTime AS Date, o.PaymentMethod\r\nFROM Customer AS c\r\nJOIN Orders AS o ON c.CustomerID = o.CustomerID\r\nJOIN OrderItem AS oi ON o.OrderID = oi.OrderID\r\nJOIN OrderTransaction as ot ON ot.OrderID = o.OrderID\r\nGROUP BY o.OrderID, c.customerName\r\nORDER BY Date";
+            string query = $"SELECT o.OrderID, c.CustomerName, o.OrderTime AS Date, o.PaymentMethod\r\nFROM Customer AS c\r\nJOIN Orders AS o ON c.CustomerID = o.CustomerID\r\nJOIN OrderItem AS oi ON o.OrderID = oi.OrderID\r\nJOIN OrderTransaction as ot ON ot.OrderID = o.OrderID\r\nWHERE c.CustomerName LIKE '%{textBox1.Text}%'\r\nGROUP BY o.OrderID, c.customerName\r\nORDER BY Date";
             func.Displaydata(dataGridView1, query);
         }
 
@@ -50,19 +46,19 @@ namespace backbone.AdminForm
             if (int.TryParse(orderIDString, out int orderID))
             {
 
-                PublicVariables.orderID = orderID;
+                pv.orderID = orderID;
                 func.getRecordsInfo();
             }
             else
             {
-                PublicVariables.orderID = 0;
+                pv.orderID = 0;
             }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(PublicVariables.orderID == 0) 
+            if(pv.orderID == 0) 
             {
                 // nothing to show
             }
@@ -76,13 +72,13 @@ namespace backbone.AdminForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (PublicVariables.orderID == 0)
+            if (pv.orderID == 0)
             {
                 // nothing to show
             }
             else
             {
-                DialogResult result = MessageBox.Show($"Are you sure you want to delete Order no. {PublicVariables.orderID}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete Order no. {pv.orderID}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
@@ -93,12 +89,22 @@ namespace backbone.AdminForm
                     func.refreshOrderItem();
                     func.refreshOrderTransaction();
                     func.refreshOrders();
-                    MessageBox.Show($"Order no. {PublicVariables.orderID} has been deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    PublicVariables.orderID = 0;
+                    MessageBox.Show($"Order no. {pv.orderID} has been deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    pv.orderID = 0;
+
+                    refresh();
+
                 }
                 // If the user clicks "No", do nothing
 
             }
+        }
+
+        private void refresh()
+        {
+            string query = "SELECT o.OrderID, c.CustomerName, o.OrderTime AS Date, o.PaymentMethod\r\nFROM Customer AS c\r\nJOIN Orders AS o ON c.CustomerID = o.CustomerID\r\nJOIN OrderItem AS oi ON o.OrderID = oi.OrderID\r\nJOIN OrderTransaction as ot ON ot.OrderID = o.OrderID\r\nGROUP BY o.OrderID, c.customerName\r\nORDER BY Date";
+            func.Displaydata(dataGridView1, query);
+            textBox1.Text = string.Empty;
         }
     }
 }

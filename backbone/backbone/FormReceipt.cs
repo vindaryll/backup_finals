@@ -48,7 +48,7 @@ namespace backbone
 
                     // Create Label for Subprice
                     Label subpriceLabel = new Label();
-                    subpriceLabel.Text = $"{PublicVariables.mealTotal[i]}";
+                    subpriceLabel.Text = PublicVariables.mealTotal[i].ToString("N2");
                     subpriceLabel.Location = new System.Drawing.Point(531, initialTop);
                     subpriceLabel.Size = new System.Drawing.Size(69, textBoxHeight);
                     subpriceLabel.TextAlign = ContentAlignment.MiddleCenter;

@@ -59,3 +59,5 @@ C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-wi
 C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-windows\backbone.formMainDish.resources
 C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-windows\backbone.AdminForm.eUpdateAvailability.resources
 C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-windows\backbone.AdminForm.eUpdatePrice.resources
+C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-windows\backbone.FormEditOrder.resources
+C:\Users\daryll\OneDrive\Documents\Project\backbone\backbone\obj\Debug\net6.0-windows\backbone.Form0Start.resources

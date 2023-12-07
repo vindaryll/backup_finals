@@ -22,7 +22,7 @@ namespace backbone
         public static double[] itemPrice = new double[0];
         public static string[] itemDescription = new string[0];
         public static bool[] itemAvailability = new bool[0];
-        public static int indexItem; // for orderitem
+        public static int indexItem; // for orderitem and view order
 
         // for manipulation
         public static double[] itemQuantity = new double[0];
@@ -51,12 +51,15 @@ namespace backbone
         public static double currentPrice;
 
 
-            // 
+        // RECORD
+        public static int[] record_itemID = new int[0];
+        public static string[] record_itemName = new string[0];
+        public static double[] record_quantity = new double[0];
+        public static double[] record_mealtotal = new double[0];
 
 
-        
 
-        
+
     }
 
 }

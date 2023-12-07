@@ -77,7 +77,7 @@
             this.btnAvailability5.Name = "btnAvailability5";
             this.btnAvailability5.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability5.TabIndex = 53;
-            this.btnAvailability5.Text = "AVAILABILITY";
+            this.btnAvailability5.Text = "UPDATE AVAILABILITY";
             this.btnAvailability5.UseVisualStyleBackColor = true;
             this.btnAvailability5.Click += new System.EventHandler(this.btnAvailability5_Click);
             // 
@@ -95,7 +95,7 @@
             this.btnUpdatePrice5.Name = "btnUpdatePrice5";
             this.btnUpdatePrice5.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice5.TabIndex = 51;
-            this.btnUpdatePrice5.Text = "UPDATE ITEM";
+            this.btnUpdatePrice5.Text = "UPDATE PRICE";
             this.btnUpdatePrice5.UseVisualStyleBackColor = true;
             this.btnUpdatePrice5.Click += new System.EventHandler(this.btnUpdatePrice5_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnAvailability4.Name = "btnAvailability4";
             this.btnAvailability4.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability4.TabIndex = 50;
-            this.btnAvailability4.Text = "AVAILABILITY";
+            this.btnAvailability4.Text = "UPDATE AVAILABILITY";
             this.btnAvailability4.UseVisualStyleBackColor = true;
             this.btnAvailability4.Click += new System.EventHandler(this.btnAvailability4_Click);
             // 
@@ -123,7 +123,7 @@
             this.btnUpdatePrice4.Name = "btnUpdatePrice4";
             this.btnUpdatePrice4.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice4.TabIndex = 48;
-            this.btnUpdatePrice4.Text = "UPDATE ITEM";
+            this.btnUpdatePrice4.Text = "UPDATE PRICE";
             this.btnUpdatePrice4.UseVisualStyleBackColor = true;
             this.btnUpdatePrice4.Click += new System.EventHandler(this.btnUpdatePrice4_Click);
             // 
@@ -133,7 +133,7 @@
             this.btnAvailability3.Name = "btnAvailability3";
             this.btnAvailability3.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability3.TabIndex = 47;
-            this.btnAvailability3.Text = "AVAILABILITY";
+            this.btnAvailability3.Text = "UPDATE AVAILABILITY";
             this.btnAvailability3.UseVisualStyleBackColor = true;
             this.btnAvailability3.Click += new System.EventHandler(this.btnAvailability3_Click);
             // 
@@ -151,7 +151,7 @@
             this.btnUpdatePrice3.Name = "btnUpdatePrice3";
             this.btnUpdatePrice3.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice3.TabIndex = 45;
-            this.btnUpdatePrice3.Text = "UPDATE ITEM";
+            this.btnUpdatePrice3.Text = "UPDATE PRICE";
             this.btnUpdatePrice3.UseVisualStyleBackColor = true;
             this.btnUpdatePrice3.Click += new System.EventHandler(this.btnUpdatePrice3_Click);
             // 
@@ -161,7 +161,7 @@
             this.btnAvailability2.Name = "btnAvailability2";
             this.btnAvailability2.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability2.TabIndex = 44;
-            this.btnAvailability2.Text = "AVAILABILITY";
+            this.btnAvailability2.Text = "UPDATE AVAILABILITY";
             this.btnAvailability2.UseVisualStyleBackColor = true;
             this.btnAvailability2.Click += new System.EventHandler(this.btnAvailability2_Click);
             // 
@@ -179,7 +179,7 @@
             this.btnUpdatePrice2.Name = "btnUpdatePrice2";
             this.btnUpdatePrice2.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice2.TabIndex = 42;
-            this.btnUpdatePrice2.Text = "UPDATE ITEM";
+            this.btnUpdatePrice2.Text = "UPDATE PRICE";
             this.btnUpdatePrice2.UseVisualStyleBackColor = true;
             this.btnUpdatePrice2.Click += new System.EventHandler(this.btnUpdatePrice2_Click);
             // 
@@ -189,7 +189,7 @@
             this.btnAvailability1.Name = "btnAvailability1";
             this.btnAvailability1.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability1.TabIndex = 41;
-            this.btnAvailability1.Text = "AVAILABILITY";
+            this.btnAvailability1.Text = "UPDATE AVAILABILITY";
             this.btnAvailability1.UseVisualStyleBackColor = true;
             this.btnAvailability1.Click += new System.EventHandler(this.btnAvailability1_Click);
             // 
@@ -207,7 +207,7 @@
             this.btnUpdatePrice1.Name = "btnUpdatePrice1";
             this.btnUpdatePrice1.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice1.TabIndex = 39;
-            this.btnUpdatePrice1.Text = "UPDATE ITEM";
+            this.btnUpdatePrice1.Text = "UPDATE PRICE";
             this.btnUpdatePrice1.UseVisualStyleBackColor = true;
             this.btnUpdatePrice1.Click += new System.EventHandler(this.btnUpdatePrice1_Click);
             // 
@@ -217,7 +217,7 @@
             this.btnAvailability6.Name = "btnAvailability6";
             this.btnAvailability6.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability6.TabIndex = 56;
-            this.btnAvailability6.Text = "AVAILABILITY";
+            this.btnAvailability6.Text = "UPDATE AVAILABILITY";
             this.btnAvailability6.UseVisualStyleBackColor = true;
             this.btnAvailability6.Click += new System.EventHandler(this.btnAvailability6_Click);
             // 
@@ -235,7 +235,7 @@
             this.btnUpdatePrice6.Name = "btnUpdatePrice6";
             this.btnUpdatePrice6.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice6.TabIndex = 54;
-            this.btnUpdatePrice6.Text = "UPDATE ITEM";
+            this.btnUpdatePrice6.Text = "UPDATE PRICE";
             this.btnUpdatePrice6.UseVisualStyleBackColor = true;
             this.btnUpdatePrice6.Click += new System.EventHandler(this.btnUpdatePrice6_Click);
             // 
@@ -245,7 +245,7 @@
             this.btnAvailability7.Name = "btnAvailability7";
             this.btnAvailability7.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability7.TabIndex = 59;
-            this.btnAvailability7.Text = "AVAILABILITY";
+            this.btnAvailability7.Text = "UPDATE AVAILABILITY";
             this.btnAvailability7.UseVisualStyleBackColor = true;
             this.btnAvailability7.Click += new System.EventHandler(this.btnAvailability7_Click);
             // 
@@ -263,7 +263,7 @@
             this.btnUpdatePrice7.Name = "btnUpdatePrice7";
             this.btnUpdatePrice7.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice7.TabIndex = 57;
-            this.btnUpdatePrice7.Text = "UPDATE ITEM";
+            this.btnUpdatePrice7.Text = "UPDATE PRICE";
             this.btnUpdatePrice7.UseVisualStyleBackColor = true;
             this.btnUpdatePrice7.Click += new System.EventHandler(this.btnUpdatePrice7_Click);
             // 
@@ -273,7 +273,7 @@
             this.btnAvailability8.Name = "btnAvailability8";
             this.btnAvailability8.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability8.TabIndex = 62;
-            this.btnAvailability8.Text = "AVAILABILITY";
+            this.btnAvailability8.Text = "UPDATE AVAILABILITY";
             this.btnAvailability8.UseVisualStyleBackColor = true;
             this.btnAvailability8.Click += new System.EventHandler(this.btnAvailability8_Click);
             // 
@@ -291,7 +291,7 @@
             this.btnUpdatePrice8.Name = "btnUpdatePrice8";
             this.btnUpdatePrice8.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice8.TabIndex = 60;
-            this.btnUpdatePrice8.Text = "UPDATE ITEM";
+            this.btnUpdatePrice8.Text = "UPDATE PRICE";
             this.btnUpdatePrice8.UseVisualStyleBackColor = true;
             this.btnUpdatePrice8.Click += new System.EventHandler(this.btnUpdatePrice8_Click);
             // 
@@ -301,7 +301,7 @@
             this.btnAvailability9.Name = "btnAvailability9";
             this.btnAvailability9.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability9.TabIndex = 65;
-            this.btnAvailability9.Text = "AVAILABILITY";
+            this.btnAvailability9.Text = "UPDATE AVAILABILITY";
             this.btnAvailability9.UseVisualStyleBackColor = true;
             this.btnAvailability9.Click += new System.EventHandler(this.btnAvailability9_Click);
             // 
@@ -319,7 +319,7 @@
             this.btnUpdatePrice9.Name = "btnUpdatePrice9";
             this.btnUpdatePrice9.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice9.TabIndex = 63;
-            this.btnUpdatePrice9.Text = "UPDATE ITEM";
+            this.btnUpdatePrice9.Text = "UPDATE PRICE";
             this.btnUpdatePrice9.UseVisualStyleBackColor = true;
             this.btnUpdatePrice9.Click += new System.EventHandler(this.btnUpdatePrice9_Click);
             // 
@@ -329,7 +329,7 @@
             this.btnAvailability10.Name = "btnAvailability10";
             this.btnAvailability10.Size = new System.Drawing.Size(195, 82);
             this.btnAvailability10.TabIndex = 68;
-            this.btnAvailability10.Text = "AVAILABILITY";
+            this.btnAvailability10.Text = "UPDATE AVAILABILITY";
             this.btnAvailability10.UseVisualStyleBackColor = true;
             this.btnAvailability10.Click += new System.EventHandler(this.btnAvailability10_Click);
             // 
@@ -347,7 +347,7 @@
             this.btnUpdatePrice10.Name = "btnUpdatePrice10";
             this.btnUpdatePrice10.Size = new System.Drawing.Size(195, 82);
             this.btnUpdatePrice10.TabIndex = 66;
-            this.btnUpdatePrice10.Text = "UPDATE ITEM";
+            this.btnUpdatePrice10.Text = "UPDATE PRICE";
             this.btnUpdatePrice10.UseVisualStyleBackColor = true;
             this.btnUpdatePrice10.Click += new System.EventHandler(this.btnUpdatePrice10_Click);
             // 
