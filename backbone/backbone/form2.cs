@@ -1,6 +1,5 @@
 ﻿namespace backbone
 {
-
     public partial class form2 : Form
     {
 
@@ -11,22 +10,22 @@
 
         private void button2_Click(object sender, EventArgs e)
         {
-            formCustomer fc = new formCustomer();
+            CustomerForms.formCustomer form = new();
             this.Close();
-            fc.Show();
+            form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminForm.aLoginForm form1 = new AdminForm.aLoginForm();
-            form1.Show();
+            AdminForms.aLoginForm form = new();
+            form.Show();
             this.Close();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Form1 form1 = new();
             form1.Show();
             this.Close();
         }

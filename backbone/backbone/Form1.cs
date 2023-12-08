@@ -2,7 +2,9 @@ namespace backbone
 {
     public partial class Form1 : Form
     {
-        Functions func = new Functions();
+
+        Functions func = new();
+
         public Form1()
         {
             InitializeComponent();
@@ -16,10 +18,9 @@ namespace backbone
 
         private void Form1_click(object sender, EventArgs e)
         {
-            form2 f2 = new form2();
-            this.Hide();
-            f2.ShowDialog();
+            form2 form = new();
+            form.Show();
+            this.Close();       
         }
-
     }
 }

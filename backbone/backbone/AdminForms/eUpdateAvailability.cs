@@ -1,0 +1,72 @@
+﻿using pv = backbone.PublicVariables;
+namespace backbone.AdminForms
+{
+    public partial class eUpdateAvailability : Form
+    {
+        Functions func = new();
+        bool avail; // variable for availability
+        public eUpdateAvailability()
+        {
+            InitializeComponent();
+            showData();
+        }
+
+
+        private void showData()
+        {
+            func.getItemInfo();
+            func.picsUpdate(pv.adminItemIndex, button1, button2);
+            func.picture(pv.adminItemIndex, pictureBox1);
+            label1.Text = pv.itemName[pv.adminItemIndex].ToString();
+            label2.Text = $"ITEM ID: {pv.itemID[pv.adminItemIndex]}";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dItemForm form = new();
+            form.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!pv.itemAvailability[pv.adminItemIndex])
+            {
+                DialogResult result = MessageBox.Show($"Do you want to set Item no.{pv.itemID[pv.adminItemIndex]} into available?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    avail = true;
+                    func.updateAvailability(pv.adminItemIndex, avail);
+                    MessageBox.Show("Availability Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showData();
+                }
+
+            }
+            else
+            {
+                // nothing to show
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (pv.itemAvailability[pv.adminItemIndex])
+            {
+                DialogResult result = MessageBox.Show($"Do you want to set Item no.{pv.itemID[pv.adminItemIndex]} into unavailable?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    avail = false;
+                    func.updateAvailability(pv.adminItemIndex, avail);
+                    MessageBox.Show("Availability Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showData();
+                }
+
+            }
+            else
+            {
+                // nothing to show
+            }
+        }
+    }
+}

@@ -6,7 +6,7 @@ namespace backbone
     public class Functions
     {
 
-        DbConnect dbcon = new DbConnect();
+        DbConnect dbcon = new();
 
 
         public void VarReset()
@@ -867,7 +867,6 @@ namespace backbone
                 dbcon.OpenCon();
                 MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
                 cmd.ExecuteNonQuery();
-                // MessageBox.Show("Updated OrderItem!");
             }
             catch (Exception ex)
             {
@@ -895,7 +894,7 @@ namespace backbone
             try
             {
                 dbcon.OpenCon();
-                string query = $"SELECT C.CustomerID, C.CustomerName, C.Address, C.ContactNumber, OT.Total AS TotalBill, OT.AmountPaid AS Payment, OT.ChangeAmount AS `Change` FROM Orders O JOIN Customer C ON O.CustomerID = C.CustomerID JOIN OrderTransaction OT ON O.OrderID = OT.OrderID WHERE O.OrderID = {PublicVariables.orderID};";
+                string query = $"SELECT C.CustomerID, C.CustomerName, C.Address, C.ContactNumber, OT.Total AS TotalBill, OT.AmountPaid AS Payment, OT.ChangeAmount AS `Change` FROM Orders O JOIN Customer C ON O.CustomerID = C.CustomerID JOIN OrderTransaction OT ON O.OrderID = OT.OrderID WHERE O.OrderID = {pv.orderID};";
                 MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -934,7 +933,7 @@ namespace backbone
             {
                 dbcon.OpenCon();
 
-                string query = $"SELECT i.ItemID, i.ItemName, oi.Quantity, oi.MealTotal FROM Item AS i JOIN OrderItem AS oi ON oi.ItemID = i.ItemID JOIN Orders AS o ON o.OrderID = oi.OrderID WHERE o.OrderID = {PublicVariables.orderID} GROUP BY i.ItemName, oi.Quantity, oi.MealTotal ORDER BY i.ItemID";
+                string query = $"SELECT i.ItemID, i.ItemName, oi.Quantity, oi.MealTotal FROM Item AS i JOIN OrderItem AS oi ON oi.ItemID = i.ItemID JOIN Orders AS o ON o.OrderID = oi.OrderID WHERE o.OrderID = {pv.orderID} GROUP BY i.ItemName, oi.Quantity, oi.MealTotal ORDER BY i.ItemID";
                 MySqlCommand cmd = new MySqlCommand(query, dbcon.Getcon());
                 MySqlDataReader reader = cmd.ExecuteReader();
 
