@@ -10,16 +10,26 @@ namespace backbone.AdminForms
         {
             InitializeComponent();
             showData();
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            }
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
 
+        }
         private void showData()
         {
             func.getItemInfo();

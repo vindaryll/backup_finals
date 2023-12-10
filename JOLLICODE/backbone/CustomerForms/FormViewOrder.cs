@@ -12,18 +12,30 @@ namespace backbone.CustomerForms
             showData();
             lblTotalBill.Text = "PHP " + pv.totalBill.ToString("N2");
             lblTotalQuantity.Text = pv.totalQuantity.ToString();
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
+                }
+                lblTotalQuantity.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblTotalBill.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         private void showData()
         {
             dataGridView1.Rows.Clear();
-
-            //pre-define or p'wedeng kami na ang mag-edit
-            //dataGridView1.Columns.Add("itemID", "ITEM ID");
-            //dataGridView1.Columns.Add("itemName", "ITEM NAME");
-            //dataGridView1.Columns.Add("itemQuantity", "ITEM QUANTITY");
-            //dataGridView1.Columns.Add("mealTotal", "MEAL TOTAL");
-
             func.showItemOnDT(dataGridView1);
         }
 
@@ -67,18 +79,6 @@ namespace backbone.CustomerForms
                 // nothing to show
             }
 
-        }
-
-        private void FormViewOrder_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
-            }
-            lblTotalQuantity.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblTotalBill.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
         }
     }
 }

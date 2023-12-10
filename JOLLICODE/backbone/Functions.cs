@@ -422,23 +422,25 @@ namespace backbone
             string[] Usidedish = new string[5];
             string[] beverage = new string[7];
             string[] Ubeverage = new string[7];
+
             // for maindish
             for (int i = 0; i < 10; i++)
             {
-                maindish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\maindish{i + 1:D2}.png";
-                Umaindish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Umaindish{i + 1:D2}.png";
+                
+                maindish[i] = $"{pv.picturePath}order\\maindish{i + 1:D2}.png";
+                Umaindish[i] = $"{pv.picturePath}order\\Umaindish{i + 1:D2}.png";
             }
             // for sidedish
             for (int i = 0; i < 5; i++)
             {
-                sidedish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\sidedish{i + 1:D2}.png";
-                Usidedish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Usidedish{i + 1:D2}.png";
+                sidedish[i] = $"{pv.picturePath}order\\sidedish{i + 1:D2}.png";
+                Usidedish[i] = $"{pv.picturePath}order\\Usidedish{i + 1:D2}.png";
             }
             // for beverages
             for (int i = 0; i < 7; i++)
             {
-                beverage[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\beverage{i + 1:D2}.png";
-                Ubeverage[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Ubeverage{i + 1:D2}.png";
+                beverage[i] = $"{pv.picturePath}order\\beverage{i + 1:D2}.png";
+                Ubeverage[i] = $"{pv.picturePath}order\\Ubeverage{i + 1:D2}.png";
             }
 
             if (index <= 9 && index >= 0)
@@ -536,20 +538,20 @@ namespace backbone
             // for maindish
             for (int i = 0; i < 10; i++)
             {
-                maindish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\maindish{i + 1:D2}.png";
-                Umaindish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\Umaindish{i + 1:D2}.png";
+                maindish[i] = $"{pv.picturePath}update\\maindish{i + 1:D2}.png";
+                Umaindish[i] = $"{pv.picturePath}update\\Umaindish{i + 1:D2}.png";
             }
             // for sidedish
             for (int i = 0; i < 5; i++)
             {
-                sidedish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\sidedish{i + 1:D2}.png";
-                Usidedish[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\Usidedish{i + 1:D2}.png";
+                sidedish[i] = $"{pv.picturePath}update\\sidedish{i + 1:D2}.png";
+                Usidedish[i] = $"{pv.picturePath}update\\Usidedish{i + 1:D2}.png";
             }
             // for beverages
             for (int i = 0; i < 7; i++)
             {
-                beverage[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\beverage{i + 1:D2}.png";
-                Ubeverage[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\update\\Ubeverage{i + 1:D2}.png";
+                beverage[i] = $"{pv.picturePath}update\\beverage{i + 1:D2}.png";
+                Ubeverage[i] = $"{pv.picturePath}update\\Ubeverage{i + 1:D2}.png";
             }
 
             if (index <= 9 && index >= 0)
@@ -627,11 +629,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\maindish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\maindish{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Umaindish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Umaindish{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)
@@ -648,11 +650,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i + 10])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\sidedish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\sidedish{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Usidedish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Usidedish{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)
@@ -669,11 +671,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i + 15])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\beverage{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\beverage{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Ubeverage{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Ubeverage{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)
@@ -691,11 +693,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\maindish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\maindish{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Umaindish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Umaindish{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)
@@ -712,11 +714,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i + 10])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\sidedish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\sidedish{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Usidedish{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Usidedish{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)
@@ -733,11 +735,11 @@ namespace backbone
             {
                 if (pv.itemAvailability[i + 15])
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\beverage{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\beverage{i + 1:D2}.png";
                 }
                 else
                 {
-                    imagePaths[i] = $"C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\picture\\order\\Ubeverage{i + 1:D2}.png";
+                    imagePaths[i] = $"{pv.picturePath}order\\Ubeverage{i + 1:D2}.png";
                 }
             }
             for (int i = 0; i < imagePaths.Length; i++)

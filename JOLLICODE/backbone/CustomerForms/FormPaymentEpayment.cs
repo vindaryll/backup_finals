@@ -9,8 +9,26 @@ namespace backbone.CustomerForms
         {
             InitializeComponent();
             lblPayment.Text = "PHP " + pv.totalBill.ToString("N2");
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                }
+                lblPayment.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             FormPayment1 form = new();
@@ -37,7 +55,6 @@ namespace backbone.CustomerForms
             {
                 c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
             }
-            lblPayment.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
         }
     }
 }

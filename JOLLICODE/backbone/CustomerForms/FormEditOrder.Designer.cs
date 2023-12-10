@@ -28,128 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            lblMealTotal = new Label();
-            lblPrice = new Label();
-            lblItemName = new Label();
-            lblQuantity = new Label();
-            button2 = new Button();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lblMealTotal = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // button3
             // 
-            button3.BackgroundImage = Properties.Resources.redreturnbtn;
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(23, 986);
-            button3.Name = "button3";
-            button3.Size = new Size(188, 37);
-            button3.TabIndex = 21;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.BackgroundImage = global::backbone.Properties.Resources.redreturnbtn;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(23, 986);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(188, 37);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblMealTotal
             // 
-            lblMealTotal.BackColor = Color.FromArgb(242, 242, 242);
-            lblMealTotal.Location = new Point(382, 851);
-            lblMealTotal.Name = "lblMealTotal";
-            lblMealTotal.Size = new Size(367, 48);
-            lblMealTotal.TabIndex = 18;
-            lblMealTotal.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblMealTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblMealTotal.Location = new System.Drawing.Point(382, 851);
+            this.lblMealTotal.Name = "lblMealTotal";
+            this.lblMealTotal.Size = new System.Drawing.Size(367, 48);
+            this.lblMealTotal.TabIndex = 18;
+            this.lblMealTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPrice
             // 
-            lblPrice.BackColor = Color.FromArgb(242, 242, 242);
-            lblPrice.FlatStyle = FlatStyle.Flat;
-            lblPrice.Location = new Point(382, 447);
-            lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(253, 39);
-            lblPrice.TabIndex = 17;
-            lblPrice.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPrice.Location = new System.Drawing.Point(382, 447);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(253, 39);
+            this.lblPrice.TabIndex = 17;
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblItemName
             // 
-            lblItemName.BackColor = Color.FromArgb(242, 242, 242);
-            lblItemName.FlatStyle = FlatStyle.Flat;
-            lblItemName.ForeColor = Color.FromArgb(255, 49, 49);
-            lblItemName.Location = new Point(382, 367);
-            lblItemName.Name = "lblItemName";
-            lblItemName.Size = new Size(367, 39);
-            lblItemName.TabIndex = 16;
-            lblItemName.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblItemName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblItemName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblItemName.Location = new System.Drawing.Point(382, 367);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(367, 39);
+            this.lblItemName.TabIndex = 16;
+            this.lblItemName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblQuantity
             // 
-            lblQuantity.BackColor = Color.FromArgb(242, 242, 242);
-            lblQuantity.Location = new Point(348, 693);
-            lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(145, 68);
-            lblQuantity.TabIndex = 14;
-            lblQuantity.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblQuantity.Location = new System.Drawing.Point(348, 693);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(145, 68);
+            this.lblQuantity.TabIndex = 14;
+            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.decreasequan;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(573, 693);
-            button2.Name = "button2";
-            button2.Size = new Size(68, 68);
-            button2.TabIndex = 13;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.BackgroundImage = global::backbone.Properties.Resources.decreasequan;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(573, 693);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 68);
+            this.button2.TabIndex = 13;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.increasequan;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(199, 690);
-            button1.Name = "button1";
-            button1.Size = new Size(68, 68);
-            button1.TabIndex = 12;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.BackgroundImage = global::backbone.Properties.Resources.increasequan;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(199, 690);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 68);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(88, 357);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 200);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(88, 357);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // FormEditOrder
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Customer_Edit_Order_Interface;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(839, 1041);
-            Controls.Add(button3);
-            Controls.Add(lblMealTotal);
-            Controls.Add(lblPrice);
-            Controls.Add(lblItemName);
-            Controls.Add(lblQuantity);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormEditOrder";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormEditOrder";
-            Load += FormEditOrder_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::backbone.Properties.Resources.Customer_Edit_Order_Interface;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(839, 1041);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.lblMealTotal);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblItemName);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormEditOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormEditOrder";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -1,5 +1,5 @@
 ﻿using System.Drawing.Text;
-
+using pv = backbone.PublicVariables;
 namespace backbone.AdminForms
 {
     public partial class bChangepass : Form
@@ -8,6 +8,25 @@ namespace backbone.AdminForms
         public bChangepass()
         {
             InitializeComponent();
+            useCustomFont();
+        }
+
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,19 +58,11 @@ namespace backbone.AdminForms
             }
         }
 
-        private void bChangepass_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-
+            aLoginForm form = new();
+            form.Show();
+            this.Close();
         }
     }
 }

@@ -10,8 +10,25 @@ namespace backbone.CustomerForms
         {
             InitializeComponent();
             getBtnInfo();
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         private void getBtnInfo()
         {
             // names
@@ -95,16 +112,6 @@ namespace backbone.CustomerForms
             if (ParentForm is FormOrderInterface parent)
             {
                 parent.Close();
-            }
-        }
-
-        private void userFormBeverage_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
             }
         }
     }

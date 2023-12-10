@@ -1,5 +1,5 @@
 ﻿using System.Drawing.Text;
-
+using pv = backbone.PublicVariables;
 namespace backbone.MiscForms
 {
     public partial class ShuttingDown : Form
@@ -9,15 +9,24 @@ namespace backbone.MiscForms
         public ShuttingDown()
         {
             InitializeComponent();
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 18, FontStyle.Regular);
-            }
-
+            useCustomFont();
             timer1.Start();
+        }
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

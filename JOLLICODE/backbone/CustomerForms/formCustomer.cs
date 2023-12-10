@@ -9,9 +9,26 @@ namespace backbone.CustomerForms
         public formCustomer()
         {
             InitializeComponent();
+            useCustomFont();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
         {
 
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
@@ -44,16 +61,6 @@ namespace backbone.CustomerForms
             form2 form = new form2();
             this.Close();
             form.Show();
-        }
-
-        private void formCustomer_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            }
         }
     }
 }

@@ -28,103 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            linkLabel1 = new LinkLabel();
-            button2 = new Button();
-            SuspendLayout();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.FromArgb(255, 49, 49);
-            textBox1.Location = new Point(368, 755);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(381, 31);
-            textBox1.TabIndex = 2;
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.textBox1.Location = new System.Drawing.Point(368, 755);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(381, 31);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.FromArgb(255, 49, 49);
-            textBox2.Location = new Point(368, 853);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(381, 31);
-            textBox2.TabIndex = 3;
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            textBox2.UseSystemPasswordChar = true;
-            textBox2.TextChanged += textBox2_TextChanged;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.textBox2.Location = new System.Drawing.Point(368, 853);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(381, 31);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.proceedbtn1;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(623, 971);
-            button1.Name = "button1";
-            button1.Size = new Size(164, 47);
-            button1.TabIndex = 4;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.BackgroundImage = global::backbone.Properties.Resources.proceedbtn1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(623, 971);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 47);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Transparent;
-            linkLabel1.Cursor = Cursors.Hand;
-            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.LinkColor = Color.FromArgb(255, 49, 49);
-            linkLabel1.Location = new Point(580, 896);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(169, 28);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Forgot password?";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.linkLabel1.Location = new System.Drawing.Point(578, 903);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(169, 28);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.returnbtn1;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(47, 971);
-            button2.Name = "button2";
-            button2.Size = new Size(145, 47);
-            button2.TabIndex = 6;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.BackgroundImage = global::backbone.Properties.Resources.returnbtn1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(47, 971);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 47);
+            this.button2.TabIndex = 6;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // aLoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Admin_Login_Interface;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(839, 1041);
-            Controls.Add(button2);
-            Controls.Add(linkLabel1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "aLoginForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "aLoginForm";
-            Load += aLoginForm_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::backbone.Properties.Resources.Admin_Login_Interface;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(839, 1041);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "aLoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "aLoginForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

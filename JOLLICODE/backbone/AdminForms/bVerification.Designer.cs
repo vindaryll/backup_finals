@@ -88,7 +88,6 @@
             Name = "bVerification";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "bVerification";
-            Load += bVerification_Load;
             ResumeLayout(false);
             PerformLayout();
         }

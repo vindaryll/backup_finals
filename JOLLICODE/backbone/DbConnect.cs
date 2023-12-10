@@ -1,11 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
-
+using pv = backbone.PublicVariables;
 namespace backbone
 {
     class DbConnect
     {
-        private MySqlConnection con = new MySqlConnection("server=127.0.0.1; user=root; database=jollicode_db ; password=");
+        private MySqlConnection con = new MySqlConnection($"server=127.0.0.1; user=root; database={pv.dbname}; password=");
 
         public MySqlConnection Getcon()
         {

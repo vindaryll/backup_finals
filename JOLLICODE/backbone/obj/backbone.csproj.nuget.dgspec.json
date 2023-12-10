@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\backbone.csproj": {}
+    "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\backbone.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\backbone.csproj": {
+    "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\backbone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\backbone.csproj",
+        "projectUniqueName": "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\backbone.csproj",
         "projectName": "backbone",
-        "projectPath": "C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\backbone.csproj",
-        "packagesPath": "C:\\Users\\Keith Carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Keith Carlo\\Downloads\\backbone\\backbone\\obj\\",
+        "projectPath": "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\backbone.csproj",
+        "packagesPath": "C:\\Users\\daryll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Keith Carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\daryll\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

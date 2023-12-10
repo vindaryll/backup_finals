@@ -1,4 +1,5 @@
-﻿using System.Drawing.Text;
+﻿using Org.BouncyCastle.Asn1.Pkcs;
+using System.Drawing.Text;
 using pv = backbone.PublicVariables;
 
 namespace backbone.CustomerForms
@@ -10,6 +11,28 @@ namespace backbone.CustomerForms
         {
             InitializeComponent();
             showData();
+            useCustomFont();
+        }
+
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
+                }
+                lblItemName.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+                lblPrice.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                lblQuantity.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+                lblMealTotal.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
         private void showData()
         {
@@ -93,21 +116,6 @@ namespace backbone.CustomerForms
                 form.Show();
                 this.Close();
             }
-        }
-
-        private void FormEditOrder_Load(object sender, EventArgs e)
-        {
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
-            }
-            lblItemName.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            lblPrice.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
-            lblQuantity.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            lblMealTotal.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
         }
     }
 }

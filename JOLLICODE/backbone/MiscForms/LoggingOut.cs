@@ -4,11 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+using pv = backbone.PublicVariables;
 namespace backbone.MiscForms
 {
     public partial class LoggingOut : Form
@@ -17,9 +13,26 @@ namespace backbone.MiscForms
         public LoggingOut()
         {
             InitializeComponent();
-            timer1.Start();
+            useCustomFont();
+            timer1.Start();  
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             string dots = new string('.', dotsCount);
@@ -43,16 +56,6 @@ namespace backbone.MiscForms
         private bool LogoutComplete()
         {
             return dotsCount == 4; // out of range
-        }
-
-        private void LoggingOut_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 18, FontStyle.Regular);
-            }
         }
     }
 }

@@ -29,81 +29,81 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPaymentEpayment));
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            lblPayment = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblPayment = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(302, 550);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(240, 240);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(302, 550);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.redreturnbtn;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(23, 985);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 39);
-            button1.TabIndex = 4;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.BackgroundImage = global::backbone.Properties.Resources.redreturnbtn;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(23, 985);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 39);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.greenproceedbtn;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(628, 985);
-            button2.Name = "button2";
-            button2.Size = new Size(183, 38);
-            button2.TabIndex = 5;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.BackgroundImage = global::backbone.Properties.Resources.greenproceedbtn;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(628, 985);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 38);
+            this.button2.TabIndex = 5;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblPayment
             // 
-            lblPayment.BackColor = Color.FromArgb(242, 242, 242);
-            lblPayment.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPayment.ForeColor = Color.FromArgb(255, 49, 49);
-            lblPayment.Location = new Point(418, 815);
-            lblPayment.Name = "lblPayment";
-            lblPayment.Size = new Size(265, 35);
-            lblPayment.TabIndex = 7;
-            lblPayment.TextAlign = ContentAlignment.MiddleCenter;
+            this.lblPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.lblPayment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblPayment.Location = new System.Drawing.Point(418, 815);
+            this.lblPayment.Name = "lblPayment";
+            this.lblPayment.Size = new System.Drawing.Size(265, 35);
+            this.lblPayment.TabIndex = 7;
+            this.lblPayment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPaymentEpayment
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Customer_EPayment_Interface;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(839, 1041);
-            Controls.Add(lblPayment);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormPaymentEpayment";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormPaymentEpayment";
-            Load += FormPaymentEpayment_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::backbone.Properties.Resources.Customer_EPayment_Interface;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(839, 1041);
+            this.Controls.Add(this.lblPayment);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormPaymentEpayment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormPaymentEpayment";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -28,157 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            lblOrderID = new Label();
-            lblName = new Label();
-            lblAddress = new Label();
-            lblPhone = new Label();
-            lblDate = new Label();
-            lblMop = new Label();
-            lblTotal = new Label();
-            lblPayment = new Label();
-            lblChange = new Label();
-            button1 = new Button();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblOrderID = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblMop = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblPayment = new System.Windows.Forms.Label();
+            this.lblChange = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.AutoScroll = true;
-            panel1.BackColor = Color.White;
-            panel1.Location = new Point(63, 342);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(717, 296);
-            panel1.TabIndex = 4;
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(63, 342);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 296);
+            this.panel1.TabIndex = 4;
             // 
             // lblOrderID
             // 
-            lblOrderID.BackColor = Color.White;
-            lblOrderID.ForeColor = Color.FromArgb(255, 49, 49);
-            lblOrderID.Location = new Point(211, 170);
-            lblOrderID.Name = "lblOrderID";
-            lblOrderID.Size = new Size(171, 30);
-            lblOrderID.TabIndex = 10;
-            lblOrderID.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblOrderID.BackColor = System.Drawing.Color.White;
+            this.lblOrderID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblOrderID.Location = new System.Drawing.Point(211, 170);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(171, 30);
+            this.lblOrderID.TabIndex = 10;
+            this.lblOrderID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblName
             // 
-            lblName.BackColor = Color.White;
-            lblName.ForeColor = Color.FromArgb(255, 49, 49);
-            lblName.Location = new Point(172, 217);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(290, 30);
-            lblName.TabIndex = 11;
-            lblName.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblName.BackColor = System.Drawing.Color.White;
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblName.Location = new System.Drawing.Point(172, 217);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(290, 30);
+            this.lblName.TabIndex = 11;
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblAddress
             // 
-            lblAddress.BackColor = Color.White;
-            lblAddress.ForeColor = Color.FromArgb(255, 49, 49);
-            lblAddress.Location = new Point(211, 250);
-            lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(387, 30);
-            lblAddress.TabIndex = 12;
-            lblAddress.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblAddress.BackColor = System.Drawing.Color.White;
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblAddress.Location = new System.Drawing.Point(211, 250);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(387, 30);
+            this.lblAddress.TabIndex = 12;
+            this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPhone
             // 
-            lblPhone.BackColor = Color.White;
-            lblPhone.ForeColor = Color.FromArgb(255, 49, 49);
-            lblPhone.Location = new Point(604, 217);
-            lblPhone.Name = "lblPhone";
-            lblPhone.Size = new Size(164, 30);
-            lblPhone.TabIndex = 13;
-            lblPhone.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblPhone.BackColor = System.Drawing.Color.White;
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblPhone.Location = new System.Drawing.Point(604, 217);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(164, 30);
+            this.lblPhone.TabIndex = 13;
+            this.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDate
             // 
-            lblDate.BackColor = Color.White;
-            lblDate.ForeColor = Color.FromArgb(255, 49, 49);
-            lblDate.Location = new Point(82, 687);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(363, 30);
-            lblDate.TabIndex = 14;
-            lblDate.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblDate.BackColor = System.Drawing.Color.White;
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblDate.Location = new System.Drawing.Point(82, 687);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(363, 30);
+            this.lblDate.TabIndex = 14;
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMop
             // 
-            lblMop.BackColor = Color.White;
-            lblMop.ForeColor = Color.FromArgb(255, 49, 49);
-            lblMop.Location = new Point(585, 653);
-            lblMop.Name = "lblMop";
-            lblMop.Size = new Size(174, 30);
-            lblMop.TabIndex = 15;
-            lblMop.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblMop.BackColor = System.Drawing.Color.White;
+            this.lblMop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblMop.Location = new System.Drawing.Point(585, 653);
+            this.lblMop.Name = "lblMop";
+            this.lblMop.Size = new System.Drawing.Size(174, 30);
+            this.lblMop.TabIndex = 15;
+            this.lblMop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotal
             // 
-            lblTotal.BackColor = Color.White;
-            lblTotal.ForeColor = Color.FromArgb(255, 49, 49);
-            lblTotal.Location = new Point(585, 687);
-            lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(174, 30);
-            lblTotal.TabIndex = 16;
-            lblTotal.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblTotal.BackColor = System.Drawing.Color.White;
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblTotal.Location = new System.Drawing.Point(585, 687);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(174, 30);
+            this.lblTotal.TabIndex = 16;
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPayment
             // 
-            lblPayment.BackColor = Color.White;
-            lblPayment.ForeColor = Color.FromArgb(255, 49, 49);
-            lblPayment.Location = new Point(281, 743);
-            lblPayment.Name = "lblPayment";
-            lblPayment.Size = new Size(164, 30);
-            lblPayment.TabIndex = 17;
-            lblPayment.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblPayment.BackColor = System.Drawing.Color.White;
+            this.lblPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblPayment.Location = new System.Drawing.Point(281, 743);
+            this.lblPayment.Name = "lblPayment";
+            this.lblPayment.Size = new System.Drawing.Size(164, 30);
+            this.lblPayment.TabIndex = 17;
+            this.lblPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblChange
             // 
-            lblChange.BackColor = Color.White;
-            lblChange.ForeColor = Color.FromArgb(255, 49, 49);
-            lblChange.Location = new Point(585, 743);
-            lblChange.Name = "lblChange";
-            lblChange.Size = new Size(174, 30);
-            lblChange.TabIndex = 18;
-            lblChange.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblChange.BackColor = System.Drawing.Color.White;
+            this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.lblChange.Location = new System.Drawing.Point(585, 743);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(174, 30);
+            this.lblChange.TabIndex = 18;
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.greenproceedbtn;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(628, 985);
-            button1.Name = "button1";
-            button1.Size = new Size(183, 38);
-            button1.TabIndex = 19;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.BackgroundImage = global::backbone.Properties.Resources.greenproceedbtn;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(628, 985);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 38);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormReceipt
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Customer_Receipt_Interface;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(839, 1041);
-            Controls.Add(button1);
-            Controls.Add(lblChange);
-            Controls.Add(lblPayment);
-            Controls.Add(lblTotal);
-            Controls.Add(lblMop);
-            Controls.Add(lblDate);
-            Controls.Add(lblPhone);
-            Controls.Add(lblAddress);
-            Controls.Add(lblName);
-            Controls.Add(lblOrderID);
-            Controls.Add(panel1);
-            DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormReceipt";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormReceipt";
-            Load += FormReceipt_Load;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::backbone.Properties.Resources.Customer_Receipt_Interface;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(839, 1041);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblChange);
+            this.Controls.Add(this.lblPayment);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.lblMop);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblPhone);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblOrderID);
+            this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormReceipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormReceipt";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

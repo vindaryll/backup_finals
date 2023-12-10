@@ -1,5 +1,5 @@
 ﻿using System.Drawing.Text;
-
+using pv = backbone.PublicVariables;
 namespace backbone.AdminForms
 {
     public partial class dItemForm : Form
@@ -13,13 +13,7 @@ namespace backbone.AdminForms
             form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             form.BringToFront();
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
-            }
+            useCustomFont();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -55,6 +49,24 @@ namespace backbone.AdminForms
             form.Dock = DockStyle.Fill;
             panel1.Controls.Add(form);
             form.BringToFront();
+        }
+
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
         }
     }
 }

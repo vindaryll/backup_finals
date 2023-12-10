@@ -11,9 +11,30 @@ namespace backbone.CustomerForms
         {
             InitializeComponent();
             showData();
+            useCustomFont();
         }
 
-
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
+                }
+                lbl1.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+                lbl2.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+                lbl3.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+                lbl4.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
+                lbl5.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
 
         private void showData()
         {
@@ -61,21 +82,6 @@ namespace backbone.CustomerForms
             FormOrderInterface form = new();
             form.Show();
             this.Close();
-        }
-
-        private void FormOrderItem_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
-            }
-            lbl1.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            lbl2.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
-            lbl3.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            lbl4.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            lbl5.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
         }
     }
 }

@@ -326,7 +326,6 @@
             Controls.Add(btnUpdatePrice1);
             Name = "userFormItem2";
             Size = new Size(489, 640);
-            Load += userFormItem2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

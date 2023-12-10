@@ -63,7 +63,6 @@
             Name = "LoggingOut";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoggingOut";
-            Load += LoggingOut_Load;
             ResumeLayout(false);
         }
 

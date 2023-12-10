@@ -10,16 +10,27 @@ namespace backbone.AdminForms
         {
             InitializeComponent();
             refresh();
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
-            }
-            textBox1.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
+                }
+                textBox1.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -110,11 +121,6 @@ namespace backbone.AdminForms
             textBox1.Text = string.Empty;
             pv.orderID = 0;
             dataGridView1.ClearSelection();
-        }
-
-        private void fRecordsForm1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,13 +10,25 @@ namespace backbone.AdminForms
         {
             InitializeComponent();
             showdata();
+            useCustomFont();
+        }
 
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
+        private void useCustomFont()
+        {
+            try
             {
-                c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
         }
         private void showdata()
         {
@@ -43,6 +55,7 @@ namespace backbone.AdminForms
                 MessageBox.Show("Price Updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 func.getItemInfo();
                 showdata();
+                textBox1.Text = string.Empty;
             }
             else
             {

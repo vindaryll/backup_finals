@@ -1,4 +1,5 @@
 ﻿using System.Drawing.Text;
+using System.Windows.Forms;
 using pv = backbone.PublicVariables;
 
 namespace backbone.AdminForms
@@ -10,20 +11,31 @@ namespace backbone.AdminForms
         {
             InitializeComponent();
             showData();
+            useCustomFont();
+        }
 
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
+        private void useCustomFont()
+        {
+            try
             {
-                c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 8, FontStyle.Regular);
+                }
+                lblName.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblAddress.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblContact.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblCustomerID.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblPayment.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblChange.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                lblTotal.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
             }
-            lblName.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblAddress.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblContact.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblCustomerID.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblPayment.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblChange.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            lblTotal.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

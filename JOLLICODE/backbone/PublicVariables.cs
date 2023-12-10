@@ -2,12 +2,25 @@
 {
     public static class PublicVariables
     {
-        // customer Info
+        /*      
+            IMPORTANT NOTE: 
+            MAKE SURE TO REPLACE THESE FOLDER
+            PATHS AND DATABASE NAME TO AVOID
+            ERRORS ON THE SYSTEM, ENJOY!
+        */
+
+        // Connections and Folderpaths
+        public static string picturePath = "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\picture\\";
+        public static string fontPath = "C:\\Users\\daryll\\OneDrive\\Desktop\\backup_finals\\JOLLICODE\\backbone\\font\\";
+        public static string font = $"{fontPath}Jellee-Roman.ttf";
+        public static string dbname = "finals_db";
+
+        // Customer Info
         public static string customerName = "";
         public static string customerAddress = "";
         public static string customerContact = "";
 
-        // Item info
+        // Item Info
         public static int[] itemID = new int[0];
         public static string[] itemName = new string[0];
         public static double[] itemPrice = new double[0];
@@ -15,7 +28,7 @@
         public static bool[] itemAvailability = new bool[0];
         public static int indexItem; // for orderitem and view order
 
-        // for transaction
+        // For Transaction
         public static double[] itemQuantity = new double[0];
         public static double[] mealTotal = new double[0];
         public static double totalBill; // can also use on admin
@@ -25,7 +38,7 @@
         public static double changeAmount; // can also use on admin
         public static string date = "";
 
-        // for checking
+        // For Checking
         public static int customerID;
         public static bool isNewCustomer = false;
         public static int orderID; // can also use on admin
@@ -47,10 +60,6 @@
         public static string[] record_itemName = new string[0];
         public static double[] record_quantity = new double[0];
         public static double[] record_mealtotal = new double[0];
-
-
-
-
     }
 
 }

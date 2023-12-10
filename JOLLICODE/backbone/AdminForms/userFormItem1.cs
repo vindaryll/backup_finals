@@ -12,6 +12,24 @@ namespace backbone.AdminForms
             PictureBox[] pictureBoxArray = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10 };
             func.mainDish(pictureBoxArray);
             getNames();
+            useCustomFont();
+        }
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
+                }
+                label1.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
         }
 
         private void getNames()
@@ -150,17 +168,6 @@ namespace backbone.AdminForms
             {
                 parent.Close();
             }
-        }
-
-        private void userFormItem1_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 12, FontStyle.Regular);
-            }
-            label1.Font = new Font(pfc.Families[0], 14, FontStyle.Regular);
         }
     }
 }

@@ -11,8 +11,25 @@ namespace backbone.CustomerForms
             InitializeComponent();
             dataQueries();
             showData();
+            useCustomFont();
         }
 
+        private void useCustomFont()
+        {
+            try
+            {
+                PrivateFontCollection pfc = new PrivateFontCollection();
+                pfc.AddFontFile(pv.font);
+                foreach (Control c in this.Controls)
+                {
+                    c.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
         private void showData()
         {
             int initialTop = 11;
@@ -109,16 +126,6 @@ namespace backbone.CustomerForms
             MiscForms.OrderDone form = new();
             form.Show();
             this.Close();
-        }
-
-        private void FormReceipt_Load(object sender, EventArgs e)
-        {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("C:\\Users\\Keith Carlo\\Downloads\\Jellee-Roman\\Jellee-Roman.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
         }
     }
 }
